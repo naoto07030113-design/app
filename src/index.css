@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color: #123228; background: #f7faf7; font-family: "Inter", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; }
+body { margin: 0; min-width: 1180px; }
+button, input, textarea, select { font: inherit; }
+@media print { .no-print { display: none !important; } body { background: #fff; } }
