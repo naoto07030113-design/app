@@ -125,6 +125,30 @@ function App() {
     window.print();
   };
 
+  const downloadUploadedFile = () => {
+    if (!schedule.imageDataUrl || !schedule.imageName) {
+      setStatus('先に画像またはPDFをアップロードしてください。');
+      return;
+    }
+
+    const link = document.createElement('a');
+    link.href = schedule.imageDataUrl;
+    link.download = schedule.imageName;
+    link.click();
+    setStatus(`アップロード済みファイル「${schedule.imageName}」をダウンロードしました。`);
+  };
+
+  const downloadBackupFile = () => {
+    const payload = { ...schedule, updatedAt: new Date().toISOString() };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `monthly-schedule-${monthKey}.json`;
+    link.click();
+    URL.revokeObjectURL(link.href);
+    setStatus('月間予定表データをJSONファイルとしてダウンロードしました。');
+  };
+
   return (
     <main className="min-h-screen bg-[#f4f8f4] px-8 py-6 text-[#123228]">
       <section className="no-print mx-auto mb-5 max-w-[1500px] rounded-2xl border-2 border-[#1f5b45] bg-white p-5 shadow-sm">
@@ -145,6 +169,8 @@ function App() {
             </label>
             <button className="rounded-lg border-2 border-[#1f5b45] bg-white px-4 py-3 font-bold hover:bg-[#eaf3ee]" onClick={() => saveSchedule()} disabled={!isDirty}>保存</button>
             <button className="rounded-lg border-2 border-[#1f5b45] bg-white px-4 py-3 font-bold hover:bg-[#eaf3ee]" onClick={downloadImage}>画像出力</button>
+            <button className="rounded-lg border-2 border-[#1f5b45] bg-white px-4 py-3 font-bold hover:bg-[#eaf3ee]" onClick={downloadUploadedFile}>元ファイルDL</button>
+            <button className="rounded-lg border-2 border-[#1f5b45] bg-white px-4 py-3 font-bold hover:bg-[#eaf3ee]" onClick={downloadBackupFile}>編集データDL</button>
             <button className="rounded-lg bg-[#1f5b45] px-4 py-3 font-bold text-white hover:bg-[#174635]" onClick={downloadPdf}>PDF出力</button>
           </div>
         </div>
