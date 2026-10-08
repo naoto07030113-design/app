@@ -1,0 +1,111 @@
+{
+  "size": {
+    "width": 1529,
+    "height": 1029
+  },
+  "selected": true,
+  "name": "ito-recruiting-recruiting-stable-20261008",
+  "chatBarText": "採用・会社情報",
+  "areas": [
+    {
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 764,
+        "height": 210
+      },
+      "action": {
+        "type": "richmenuswitch",
+        "richMenuAliasId": "ito-recruiting-stable-20261008",
+        "data": "menu=recruiting",
+        "label": "お仕事の相談"
+      }
+    },
+    {
+      "bounds": {
+        "x": 764,
+        "y": 0,
+        "width": 765,
+        "height": 210
+      },
+      "action": {
+        "type": "richmenuswitch",
+        "richMenuAliasId": "ito-company-stable-20261008",
+        "data": "menu=company",
+        "label": "会社を知る"
+      }
+    },
+    {
+      "bounds": {
+        "x": 0,
+        "y": 210,
+        "width": 764,
+        "height": 280
+      },
+      "action": {
+        "type": "message",
+        "text": "お仕事を探す"
+      }
+    },
+    {
+      "bounds": {
+        "x": 764,
+        "y": 210,
+        "width": 765,
+        "height": 280
+      },
+      "action": {
+        "type": "message",
+        "text": "働き方を選ぶ"
+      }
+    },
+    {
+      "bounds": {
+        "x": 0,
+        "y": 490,
+        "width": 764,
+        "height": 265
+      },
+      "action": {
+        "type": "message",
+        "text": "見学・応募"
+      }
+    },
+    {
+      "bounds": {
+        "x": 764,
+        "y": 490,
+        "width": 765,
+        "height": 265
+      },
+      "action": {
+        "type": "message",
+        "text": "担当者に相談"
+      }
+    },
+    {
+      "bounds": {
+        "x": 0,
+        "y": 755,
+        "width": 764,
+        "height": 274
+      },
+      "action": {
+        "type": "message",
+        "text": "採用相談を再開"
+      }
+    },
+    {
+      "bounds": {
+        "x": 764,
+        "y": 755,
+        "width": 765,
+        "height": 274
+      },
+      "action": {
+        "type": "message",
+        "text": "会社・職場情報"
+      }
+    }
+  ]
+}
