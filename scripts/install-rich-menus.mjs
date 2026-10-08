@@ -26,7 +26,7 @@ const existing = await api('/richmenu/list');
 const aliases = await api('/richmenu/alias/list');
 let saved = null;
 try { saved = JSON.parse(await readFile(new URL('installation-result.json', root), 'utf8')); } catch {}
-const previousDefault = saved?.menus?.recruiting === oldDefault?.richMenuId ? saved.previousDefault : oldDefault?.richMenuId ?? null;
+const previousDefault = saved && saved.menus?.recruiting && saved.menus.recruiting === oldDefault?.richMenuId ? saved.previousDefault : oldDefault?.richMenuId ?? null;
 const result = { previousDefault, menus: {} };
 for (const name of ['recruiting', 'company']) {
   const definition = JSON.parse(await readFile(new URL(`${name}.json`, root), 'utf8'));
