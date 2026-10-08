@@ -5,13 +5,28 @@ import { replyLineMessage, verifyLineSignature } from "@/lib/line";
 type LineTextEvent = {
   type: "message";
   replyToken: string;
-  source: { userId?: string };
+  source: { userId: string };
   message: { type: "text"; text: string };
 };
 
-type LineWebhookBody = {
-  events?: Array<LineTextEvent | Record<string, unknown>>;
-};
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null;
+}
+
+function isLineTextEvent(value: unknown): value is LineTextEvent {
+  return (
+    isRecord(value) &&
+    value.type === "message" &&
+    typeof value.replyToken === "string" &&
+    value.replyToken.length > 0 &&
+    isRecord(value.source) &&
+    typeof value.source.userId === "string" &&
+    value.source.userId.length > 0 &&
+    isRecord(value.message) &&
+    value.message.type === "text" &&
+    typeof value.message.text === "string"
+  );
+}
 
 export async function POST(request: NextRequest) {
   const rawBody = await request.text();
@@ -21,15 +36,19 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "invalid signature" }, { status: 401 });
   }
 
-  const body = JSON.parse(rawBody) as LineWebhookBody;
+  let body: unknown;
+  try {
+    body = JSON.parse(rawBody);
+  } catch {
+    return NextResponse.json({ error: "invalid body" }, { status: 400 });
+  }
 
-  for (const event of body.events ?? []) {
-    if (
-      event.type !== "message" ||
-      !("message" in event) ||
-      event.message.type !== "text" ||
-      !event.source.userId
-    ) {
+  if (!isRecord(body) || !Array.isArray(body.events)) {
+    return NextResponse.json({ error: "invalid events" }, { status: 400 });
+  }
+
+  for (const event of body.events) {
+    if (!isLineTextEvent(event)) {
       continue;
     }
 
