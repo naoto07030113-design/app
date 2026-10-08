@@ -48,7 +48,7 @@ export function buildLineMessage(reply: string | FlowReply) {
         reply.choices.slice(0, 13).map((choice, index) => ({
           type: "button", height: "md", style: index === 0 ? "primary" : "secondary",
           ...(index === 0 ? { color: "#246A7C" } : {}),
-          action: choice.uri ? { type: "uri", label: choice.label.slice(0, 40), uri: choice.uri }
+          action: choice.uri ? { type: "uri", label: choice.label.slice(0, 40), uri: new URL(choice.uri).href }
             : { type: "message", label: choice.label.slice(0, 40), text: choice.text },
         })),
       },

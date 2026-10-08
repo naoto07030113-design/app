@@ -131,6 +131,7 @@ check(() => {
       assert.equal(b.height,'md');
       assert.ok(b.action.label.length<=40);
       assert.ok(b.action.type==='uri' ? b.action.uri.startsWith('https://') : b.action.text);
+      if(b.action.type==='uri')assert.ok(/^[\x00-\x7F]+$/.test(b.action.uri));
     }
     assert.ok(Buffer.byteLength(JSON.stringify(message))<30000);
     messages.push(message);
