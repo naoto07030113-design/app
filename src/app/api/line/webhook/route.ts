@@ -5,8 +5,9 @@ import { replyLineMessage, verifyLineSignature } from "@/lib/line";
 type LineTextEvent = {
   type: "message";
   replyToken: string;
+  webhookEventId?: string;
   source: { userId: string };
-  message: { type: "text"; text: string };
+  message: { id: string; type: "text"; text: string };
 };
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -24,6 +25,8 @@ function isLineTextEvent(value: unknown): value is LineTextEvent {
     value.source.userId.length > 0 &&
     isRecord(value.message) &&
     value.message.type === "text" &&
+    typeof value.message.id === "string" &&
+    value.message.id.length > 0 &&
     typeof value.message.text === "string"
   );
 }
@@ -56,14 +59,15 @@ export async function POST(request: NextRequest) {
       const result = await handleRecruitingMessage({
         lineUserId: event.source.userId,
         message: event.message.text,
+        eventId: typeof event.webhookEventId === "string" ? event.webhookEventId : event.message.id,
       });
 
-      await replyLineMessage(event.replyToken, result.reply);
-    } catch (error) {
-      console.error("LINE recruiting webhook error", error);
+      if (result.reply) await replyLineMessage(event.replyToken, result.reply);
+    } catch {
+      console.error("LINE recruiting webhook processing failed");
       await replyLineMessage(
         event.replyToken,
-        "現在、採用担当システムで確認に時間がかかっています。内容は受け付けていますので、採用担当からの確認をお待ちください。",
+        "現在、システムの確認に時間がかかっています。保存できていない可能性があるため、少し時間をおいて同じ内容をもう一度送ってください。",
       ).catch(() => undefined);
     }
   }
