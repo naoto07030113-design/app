@@ -30,7 +30,8 @@ const previousDefault = saved && saved.menus?.recruiting && saved.menus.recruiti
 const result = { previousDefault, menus: {} };
 for (const name of ['recruiting', 'company']) {
   const definition = JSON.parse(await readFile(new URL(`${name}.json`, root), 'utf8'));
-  const alias = `ito-recruiting-${name}-20261008`;
+  const alias = `ito-${name}-20261008`;
+  await api('/richmenu/validate', { method: 'POST', body: definition });
   let menu = existing.richmenus.find(m => m.name === definition.name);
   const oldAlias = aliases.aliases.find(a => a.richMenuAliasId === alias);
   if (menu && (JSON.stringify(menu.areas) !== JSON.stringify(definition.areas) || JSON.stringify(menu.size) !== JSON.stringify(definition.size))) {
