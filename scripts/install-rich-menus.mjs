@@ -17,10 +17,14 @@ async function api(path, { method = 'GET', body, image = false } = {}) {
     throw new Error(`LINE API ${method} ${path}: HTTP ${response.status}`);
   }
   const text = await response.text();
-  return text ? JSON.parse(text) : {};
+  const data = text ? JSON.parse(text) : {};
+  if (path === "/richmenu/batch") data.requestId = response.headers.get("x-line-request-id");
+  return data;
 }
 const bot = await api('/info');
 if (bot.basicId !== '@814gpyea') throw new Error('Wrong LINE account; expected the recruiting account @814gpyea. No changes made.');
+const messages = JSON.parse(await readFile(new URL('message-validation.json', root), 'utf8'));
+for (let i = 0; i < messages.length; i += 5) await api('/message/validate/reply', { method: 'POST', body: { messages: messages.slice(i, i + 5) } });
 const oldDefault = await api('/user/all/richmenu');
 const existing = await api('/richmenu/list');
 const aliases = await api('/richmenu/alias/list');
@@ -30,7 +34,7 @@ const previousDefault = saved && saved.menus?.recruiting && saved.menus.recruiti
 const result = { previousDefault, menus: {} };
 for (const name of ['recruiting', 'company']) {
   const definition = JSON.parse(await readFile(new URL(`${name}.json`, root), 'utf8'));
-  const alias = `ito-${name}-20261008`;
+  const alias = `ito-${name}-large-20261008`;
   await api('/richmenu/validate', { method: 'POST', body: definition });
   let menu = existing.richmenus.find(m => m.name === definition.name);
   const oldAlias = aliases.aliases.find(a => a.richMenuAliasId === alias);
@@ -48,7 +52,24 @@ for (const name of ['recruiting', 'company']) {
 await writeFile(new URL('installation-result.json', root), JSON.stringify(result, null, 2));
 if (args.has('--publish')) {
   await api(`/user/all/richmenu/${result.menus.recruiting}`, { method: 'POST' });
+  // Redirect only the two aliases owned by our previous recruiting menus.
+  const previousMenus = { recruiting: 'richmenu-a484858a82d1cbcec6cb5196d938f296', company: 'richmenu-8f851944eca6f0de560ef223f2f89300' };
+  for (const name of ['recruiting', 'company']) {
+    const alias = aliases.aliases.find(a => a.richMenuAliasId === `ito-${name}-20261008`);
+    if (alias && alias.richMenuId === previousMenus[name]) await api(`/richmenu/alias/${alias.richMenuAliasId}`, { method: 'POST', body: { richMenuId: result.menus[name] } });
+  }
+  const operations = Object.entries(previousMenus).filter(([name, id]) => existing.richmenus.some(m => m.richMenuId === id && m.name === `ito-recruiting-${name}-20261008`)).map(([name, id]) => ({ type: 'link', from: id, to: result.menus[name] }));
+  if (operations.length) {
+    const body = { operations, resumeRequestKey: 'ito-menu-large-20261008' };
+    await api('/richmenu/validate/batch', { method: 'POST', body });
+    const accepted = await api('/richmenu/batch', { method: 'POST', body });
+    if (!accepted.requestId) throw new Error('LINE did not return a batch request ID.');
+    result.migrationRequestId = accepted.requestId;
+    result.migration = await api(`/richmenu/progress/batch?requestId=${encodeURIComponent(accepted.requestId)}`);
+    if (result.migration?.phase === 'failed') throw new Error('Rich-menu migration failed; retry with the same resumeRequestKey.');
+  }
   const actual = await api('/user/all/richmenu');
   if (actual?.richMenuId !== result.menus.recruiting) throw new Error('Default menu verification failed.');
 }
-console.log(JSON.stringify({ published: args.has('--publish'), previousDefault: result.previousDefault, menus: result.menus }));
+await writeFile(new URL('installation-result.json', root), JSON.stringify(result, null, 2));
+console.log(JSON.stringify({ migrationRequestId: result.migrationRequestId, migration: result.migration, published: args.has('--publish'), previousDefault: result.previousDefault, menus: result.menus }));

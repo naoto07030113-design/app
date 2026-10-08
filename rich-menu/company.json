@@ -1,36 +1,36 @@
 {
   "size": {
-    "width": 2152,
-    "height": 731
+    "width": 1528,
+    "height": 1029
   },
   "selected": true,
-  "name": "ito-recruiting-company-20261008",
+  "name": "ito-recruiting-company-large-20261008",
   "chatBarText": "採用・会社情報",
   "areas": [
     {
       "bounds": {
         "x": 0,
         "y": 0,
-        "width": 1076,
-        "height": 205
+        "width": 764,
+        "height": 228
       },
       "action": {
         "type": "richmenuswitch",
-        "richMenuAliasId": "ito-recruiting-20261008",
+        "richMenuAliasId": "ito-recruiting-large-20261008",
         "data": "menu=recruiting",
         "label": "お仕事の相談"
       }
     },
     {
       "bounds": {
-        "x": 1076,
+        "x": 764,
         "y": 0,
-        "width": 1076,
-        "height": 205
+        "width": 764,
+        "height": 228
       },
       "action": {
         "type": "richmenuswitch",
-        "richMenuAliasId": "ito-company-20261008",
+        "richMenuAliasId": "ito-company-large-20261008",
         "data": "menu=company",
         "label": "会社を知る"
       }
@@ -38,9 +38,9 @@
     {
       "bounds": {
         "x": 0,
-        "y": 205,
-        "width": 717,
-        "height": 239
+        "y": 228,
+        "width": 764,
+        "height": 267
       },
       "action": {
         "type": "uri",
@@ -49,34 +49,34 @@
     },
     {
       "bounds": {
-        "x": 717,
-        "y": 205,
-        "width": 717,
-        "height": 239
+        "x": 764,
+        "y": 228,
+        "width": 764,
+        "height": 267
       },
       "action": {
-        "type": "uri",
-        "uri": "https://ito-chiryoin.com/会社案内/"
-      }
-    },
-    {
-      "bounds": {
-        "x": 1434,
-        "y": 205,
-        "width": 718,
-        "height": 239
-      },
-      "action": {
-        "type": "uri",
-        "uri": "https://ito-chiryoin.com/"
+        "type": "message",
+        "text": "私たちについて"
       }
     },
     {
       "bounds": {
         "x": 0,
-        "y": 444,
-        "width": 717,
-        "height": 287
+        "y": 495,
+        "width": 764,
+        "height": 260
+      },
+      "action": {
+        "type": "message",
+        "text": "院・事業を知る"
+      }
+    },
+    {
+      "bounds": {
+        "x": 764,
+        "y": 495,
+        "width": 764,
+        "height": 260
       },
       "action": {
         "type": "message",
@@ -85,10 +85,10 @@
     },
     {
       "bounds": {
-        "x": 717,
-        "y": 444,
-        "width": 717,
-        "height": 287
+        "x": 0,
+        "y": 755,
+        "width": 764,
+        "height": 274
       },
       "action": {
         "type": "message",
@@ -97,14 +97,14 @@
     },
     {
       "bounds": {
-        "x": 1434,
-        "y": 444,
-        "width": 718,
-        "height": 287
+        "x": 764,
+        "y": 755,
+        "width": 764,
+        "height": 274
       },
       "action": {
         "type": "message",
-        "text": "採用相談を再開"
+        "text": "お仕事を探す"
       }
     }
   ]

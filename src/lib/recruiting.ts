@@ -1,5 +1,6 @@
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 import { advanceIntake, departmentOf, initialState, intakeSummary, readState } from "@/lib/recruiting-flow";
+import { informationReply } from "@/lib/recruiting-content";
 export type { Department } from "@/lib/recruiting-flow";
 
 export async function handleRecruitingMessage(params: { lineUserId: string; message: string; eventId: string }) {
@@ -16,9 +17,11 @@ export async function handleRecruitingMessage(params: { lineUserId: string; mess
     if (error) throw error;
     const previous = readState(applicant.intake_state ?? initialState());
     const managed = !["new", "ai_handling", "human_review"].includes(applicant.status);
-    if (managed) previous.mode = "human";
-    const result = advanceIntake(previous, managed && !["会社・職場情報", "仕事内容", "よくある質問"].includes(params.message) ? "" : params.message.slice(0, 5000));
-    const answersChanged = JSON.stringify(previous.answers) !== JSON.stringify(result.state.answers);
+    if (managed) { previous.mode = "human"; delete previous.screen; }
+    const browse = informationReply(params.message.normalize("NFKC").trim().replace(/:/g, "："));
+    const result = advanceIntake(previous, managed && !browse ? "" : params.message.slice(0, 5000));
+    const profileAnswers = (state: typeof previous) => Object.fromEntries(Object.entries(state.answers).filter(([key]) => !["consultTopic", "consultNote", "visitTiming"].includes(key)));
+    const answersChanged = JSON.stringify(profileAnswers(previous)) !== JSON.stringify(profileAnswers(result.state));
     const department = managed || !answersChanged ? applicant.department : departmentOf(result.state);
     const { data: committed, error: commitError } = await supabase.rpc("recruiting_commit_turn", {
       p_applicant_id: applicant.id, p_revision: applicant.intake_revision, p_event_id: params.eventId,

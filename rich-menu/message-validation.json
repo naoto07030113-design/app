@@ -1,0 +1,1547 @@
+[
+  {
+    "type": "flex",
+    "altText": "お仕事を探す\n仕事内容から、自分に合いそうな仕事を見つけてみませんか。\n\n地域の健康を支える治療院・訪問の仕事と、暮らしを支える福祉の仕事を、職種ごとに紹介します。気になる仕事を選ぶと、業務と相談する条件が見られます。\n\n現在の募集枠は担当者が確認します。",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "お仕事を探す",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "仕事内容から、自分に合いそうな仕事を見つけてみませんか。\n\n地域の健康を支える治療院・訪問の仕事と、暮らしを支える福祉の仕事を、職種ごとに紹介します。気になる仕事を選ぶと、業務と相談する条件が見られます。\n\n現在の募集枠は担当者が確認します。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "message",
+              "label": "院での施術・受付",
+              "text": "仕事紹介：院での施術・受付"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "訪問マッサージ",
+              "text": "仕事紹介：訪問マッサージ"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "グループホーム",
+              "text": "仕事紹介：グループホーム"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "デイサービス・介護",
+              "text": "仕事紹介：デイサービス・介護"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "働き方から相談",
+              "text": "働き方を選ぶ"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "働き方を相談\n勤務条件から希望を整理する入口です。仕事内容をまだ決めていなくても進められます。\n\n正社員：希望する雇用形態を先に整理。\nパート：勤務回数・曜日を中心に相談。\n副業：雇用形態とは分けて、副業希望を記録。\n夜間：グループホームの時間帯から相談。\n\n条件を選んだあとに、興味のある仕事を伺います。",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "働き方を相談",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "勤務条件から希望を整理する入口です。仕事内容をまだ決めていなくても進められます。\n\n正社員：希望する雇用形態を先に整理。\nパート：勤務回数・曜日を中心に相談。\n副業：雇用形態とは分けて、副業希望を記録。\n夜間：グループホームの時間帯から相談。\n\n条件を選んだあとに、興味のある仕事を伺います。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "message",
+              "label": "正社員として相談",
+              "text": "働き方：正社員"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "パートとして相談",
+              "text": "働き方：パート"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "副業として相談",
+              "text": "働き方：副業"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "夜間の働き方を相談",
+              "text": "働き方：夜間"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "条件を相談しながら決める",
+              "text": "働き方：未定"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "見学・応募\nまず職場を見てから決めたい方と、応募を進めたい方の入口を分けています。\n\n見学：希望する事業・職種・見学可能な時間帯を伺い、確認依頼にまとめます。\n\n応募：仕事・資格・働き方・開始希望を整理して、応募希望として確認依頼にまとめます。\n\n選択だけで日程や採用は確定しません。途中の回答は使える範囲で引き継ぎます。",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "見学・応募",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "まず職場を見てから決めたい方と、応募を進めたい方の入口を分けています。\n\n見学：希望する事業・職種・見学可能な時間帯を伺い、確認依頼にまとめます。\n\n応募：仕事・資格・働き方・開始希望を整理して、応募希望として確認依頼にまとめます。\n\n選択だけで日程や採用は確定しません。途中の回答は使える範囲で引き継ぎます。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "message",
+              "label": "まず見学を希望",
+              "text": "見学の希望を入力"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "応募の希望を入力",
+              "text": "応募の希望を入力"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "見学の流れを詳しく",
+              "text": "FAQ：見学の流れ"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "担当者と相談\n聞きたいことを選んでください。次に相談内容を自由に入力できます。\n勤務条件、業務の不安、応募前の確認などを相談内容として保存します。",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "担当者と相談",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "聞きたいことを選んでください。次に相談内容を自由に入力できます。\n勤務条件、業務の不安、応募前の確認などを相談内容として保存します。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "message",
+              "label": "仕事内容を相談",
+              "text": "仕事内容を相談"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "勤務条件を相談",
+              "text": "勤務条件を相談"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "給与・待遇を相談",
+              "text": "給与・待遇を相談"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "見学・応募を相談",
+              "text": "見学・応募を相談"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "その他を相談",
+              "text": "その他を相談"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "採用相談を再開",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "イトーメディカルケアを知る\n千葉県の袖ケ浦・木更津・富津の地域で、鍼灸整骨院や訪問リハビリマッサージを通じた健康のサポートを紹介しています。\n\nこの採用窓口では、グループホームやデイサービスなど福祉の仕事への関心も伺います。\n\n会社の歩み、職場の特徴、仕事の内容をそれぞれの入口で確認できます。公式HP：https://ito-chiryoin.com/",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "イトーメディカルケアを知る",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "千葉県の袖ケ浦・木更津・富津の地域で、鍼灸整骨院や訪問リハビリマッサージを通じた健康のサポートを紹介しています。\n\nこの採用窓口では、グループホームやデイサービスなど福祉の仕事への関心も伺います。\n\n会社の歩み、職場の特徴、仕事の内容をそれぞれの入口で確認できます。公式HP：https://ito-chiryoin.com/",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "uri",
+              "label": "公式ページを開く",
+              "uri": "https://ito-chiryoin.com/"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "私たちについて",
+              "text": "私たちについて"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "院・事業を知る",
+              "text": "院・事業を知る"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "お仕事の紹介",
+              "text": "お仕事の紹介"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "よくある質問",
+              "text": "よくある質問"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "私たちについて\n1995年11月、袖ケ浦で伊藤鍼灸院を開業したことから始まりました。\n\n会社案内では、一人ひとりに向き合い、地域の健康を支える姿勢を大切にしています。施術や訪問サービスを通じて、患者さんと地域の期待に応えることを目指しています。\n\n会社名：有限会社イトーメディカルケア\n所在地：千葉県袖ケ浦市野里1770-3\n\n代表挨拶・企業理念・会社概要：\nhttps://ito-chiryoin.com/会社案内/",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "私たちについて",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "1995年11月、袖ケ浦で伊藤鍼灸院を開業したことから始まりました。\n\n会社案内では、一人ひとりに向き合い、地域の健康を支える姿勢を大切にしています。施術や訪問サービスを通じて、患者さんと地域の期待に応えることを目指しています。\n\n会社名：有限会社イトーメディカルケア\n所在地：千葉県袖ケ浦市野里1770-3\n\n代表挨拶・企業理念・会社概要：\nhttps://ito-chiryoin.com/会社案内/",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "uri",
+              "label": "公式ページを開く",
+              "uri": "https://ito-chiryoin.com/会社案内/"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "院・事業を知る",
+              "text": "院・事業を知る"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "お仕事の紹介",
+              "text": "お仕事の紹介"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "会社・職場情報",
+              "text": "会社・職場情報"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "院・事業を知る\n職場ごとの特徴を選んで確認できます。\n\n本院・長浦駅前院・SANRIは院での施術や受付への関心、伊藤リハビリセンターは訪問サービスへの関心の入口です。\n\n福祉の仕事は、グループホーム・デイサービスの紹介から確認できます。",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "院・事業を知る",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "職場ごとの特徴を選んで確認できます。\n\n本院・長浦駅前院・SANRIは院での施術や受付への関心、伊藤リハビリセンターは訪問サービスへの関心の入口です。\n\n福祉の仕事は、グループホーム・デイサービスの紹介から確認できます。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "message",
+              "label": "イトー鍼灸整骨院",
+              "text": "職場：本院"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "ストレッチ鍼灸イトー整骨院",
+              "text": "職場：長浦"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "SANRI鍼灸整骨院",
+              "text": "職場：SANRI"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "伊藤リハビリセンター",
+              "text": "職場：訪問"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "福祉の仕事を知る",
+              "text": "仕事紹介：グループホーム"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "会社・職場情報",
+              "text": "会社・職場情報"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "職種と仕事内容\n仕事内容から、自分に合いそうな仕事を見つけてみませんか。\n\n地域の健康を支える治療院・訪問の仕事と、暮らしを支える福祉の仕事を、職種ごとに紹介します。気になる仕事を選ぶと、業務と相談する条件が見られます。\n\n現在の募集枠は担当者が確認します。",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "職種と仕事内容",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "仕事内容から、自分に合いそうな仕事を見つけてみませんか。\n\n地域の健康を支える治療院・訪問の仕事と、暮らしを支える福祉の仕事を、職種ごとに紹介します。気になる仕事を選ぶと、業務と相談する条件が見られます。\n\n現在の募集枠は担当者が確認します。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "message",
+              "label": "院での施術・受付",
+              "text": "仕事紹介：院での施術・受付"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "訪問マッサージ",
+              "text": "仕事紹介：訪問マッサージ"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "グループホーム",
+              "text": "仕事紹介：グループホーム"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "デイサービス・介護",
+              "text": "仕事紹介：デイサービス・介護"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "働き方から相談",
+              "text": "働き方を選ぶ"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "よくある質問\n気になる項目を選んでください。\n\n仕事を選ぶ前の疑問、夜勤・副業の働き方、見学や応募の流れを項目ごとに確認できます。",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "よくある質問",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "気になる項目を選んでください。\n\n仕事を選ぶ前の疑問、夜勤・副業の働き方、見学や応募の流れを項目ごとに確認できます。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "message",
+              "label": "資格・未経験",
+              "text": "FAQ：資格・未経験"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "給与・休日・待遇",
+              "text": "FAQ：給与・休日・待遇"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "見学の流れ",
+              "text": "FAQ：見学の流れ"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "副業・勤務回数",
+              "text": "FAQ：副業・勤務回数"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "夜勤の働き方",
+              "text": "FAQ：夜勤の働き方"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "応募後・個人情報",
+              "text": "FAQ：応募後・個人情報"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "個別に担当者へ相談",
+              "text": "担当者に相談"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "給与・休日・待遇\n給与、手当、休日、保険や交通費などは、職種・雇用形態・勤務条件により確認が必要です。このトークでは未確認の金額や待遇を確約しません。\n\n希望の仕事と働き方を選ぶと、担当者への確認事項を整理できます。「担当者と相談」では給与・待遇を相談項目として選べます。",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "給与・休日・待遇",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "給与、手当、休日、保険や交通費などは、職種・雇用形態・勤務条件により確認が必要です。このトークでは未確認の金額や待遇を確約しません。\n\n希望の仕事と働き方を選ぶと、担当者への確認事項を整理できます。「担当者と相談」では給与・待遇を相談項目として選べます。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "message",
+              "label": "他の質問を見る",
+              "text": "よくある質問"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "見学・応募",
+              "text": "見学・応募"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "働き方を相談",
+              "text": "働き方を選ぶ"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "担当者に相談",
+              "text": "担当者に相談"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "見学の流れ\n見学は、希望する事業と時間帯をこのトークで整理し、最後に確認依頼を保存する流れです。職場の雰囲気、実際の業務、勤務条件を確認する入口として利用できます。\n\n日時・場所はこの画面で確定しません。希望を選んだあと、担当者による調整が必要です。持ち物や当日の案内も、その際に確認してください。",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "見学の流れ",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "見学は、希望する事業と時間帯をこのトークで整理し、最後に確認依頼を保存する流れです。職場の雰囲気、実際の業務、勤務条件を確認する入口として利用できます。\n\n日時・場所はこの画面で確定しません。希望を選んだあと、担当者による調整が必要です。持ち物や当日の案内も、その際に確認してください。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "message",
+              "label": "他の質問を見る",
+              "text": "よくある質問"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "見学・応募",
+              "text": "見学・応募"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "働き方を相談",
+              "text": "働き方を選ぶ"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "担当者に相談",
+              "text": "担当者に相談"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "イトー鍼灸整骨院\n袖ケ浦市野里1770-3。鍼灸整骨院の本院です。院での施術・受付の役割を知りたい方はこちら。\nhttps://ito-chiryoin.com/honin/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "イトー鍼灸整骨院",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "袖ケ浦市野里1770-3。鍼灸整骨院の本院です。院での施術・受付の役割を知りたい方はこちら。\nhttps://ito-chiryoin.com/honin/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "uri",
+              "label": "公式ページを開く",
+              "uri": "https://ito-chiryoin.com/honin/"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "関連する仕事を見る",
+              "text": "仕事紹介：院での施術・受付"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "別の院・事業を見る",
+              "text": "院・事業を知る"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "見学・応募",
+              "text": "見学・応募"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "ストレッチ鍼灸イトー整骨院\n長浦駅前院として、ストレッチや鍼灸などの情報を発信しています。詳しい施術内容・アクセスは院のHPで確認できます。\nhttps://www.str-ito-chiryoin.com/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "ストレッチ鍼灸イトー整骨院",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "長浦駅前院として、ストレッチや鍼灸などの情報を発信しています。詳しい施術内容・アクセスは院のHPで確認できます。\nhttps://www.str-ito-chiryoin.com/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "uri",
+              "label": "公式ページを開く",
+              "uri": "https://www.str-ito-chiryoin.com/"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "関連する仕事を見る",
+              "text": "仕事紹介：院での施術・受付"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "別の院・事業を見る",
+              "text": "院・事業を知る"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "見学・応募",
+              "text": "見学・応募"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "SANRI鍼灸整骨院\n富津市にあるグループ院です。院の特徴や所在地は公式ページで確認できます。\nhttps://www.sanri-seikotsuin.com/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "SANRI鍼灸整骨院",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "富津市にあるグループ院です。院の特徴や所在地は公式ページで確認できます。\nhttps://www.sanri-seikotsuin.com/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "uri",
+              "label": "公式ページを開く",
+              "uri": "https://www.sanri-seikotsuin.com/"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "関連する仕事を見る",
+              "text": "仕事紹介：院での施術・受付"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "別の院・事業を見る",
+              "text": "院・事業を知る"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "見学・応募",
+              "text": "見学・応募"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "伊藤リハビリセンター\n通院が難しい方に向けて、訪問リハビリマッサージを紹介しています。ご自宅での暮らしを支えるサービスです。\nhttps://ito-chiryoin.com/reha/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+    "contents": {
+      "type": "bubble",
+      "size": "giga",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#E8F2F4",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "伊藤リハビリセンター",
+            "weight": "bold",
+            "size": "lg",
+            "color": "#102D3F",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "通院が難しい方に向けて、訪問リハビリマッサージを紹介しています。ご自宅での暮らしを支えるサービスです。\nhttps://ito-chiryoin.com/reha/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "8px",
+        "paddingAll": "16px",
+        "contents": [
+          {
+            "type": "button",
+            "height": "md",
+            "style": "primary",
+            "color": "#246A7C",
+            "action": {
+              "type": "uri",
+              "label": "公式ページを開く",
+              "uri": "https://ito-chiryoin.com/reha/"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "関連する仕事を見る",
+              "text": "仕事紹介：訪問マッサージ"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "別の院・事業を見る",
+              "text": "院・事業を知る"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "見学・応募",
+              "text": "見学・応募"
+            }
+          },
+          {
+            "type": "button",
+            "height": "md",
+            "style": "secondary",
+            "action": {
+              "type": "message",
+              "label": "保存した回答の続きへ",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  }
+]
