@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 22998)
-Total output lines: 2876
-
 [
   {
     "type": "flex",
@@ -1114,7 +1111,647 @@ Total output lines: 2876
             "paddingStart": "12px",
             "paddingEnd": "12px",
             "cornerRadius": "10px",
-            "backgroundCo…4998 tokens truncated…r": "#31584C",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "続きから答える",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "院・事業を知る\n職場ごとの特徴を選んで確認できます。\n\n本院・長浦駅前院・SANRIは院での施術や受付への関心、伊藤リハビリセンターは訪問サービスへの関心の入口です。\n\n福祉の仕事は、グループホーム・デイサービスの紹介から確認できます。",
+    "contents": {
+      "type": "bubble",
+      "size": "mega",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "院・事業を知る",
+            "weight": "bold",
+            "size": "md",
+            "color": "#31584C",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "12px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "職場ごとの特徴を選んで確認できます。\n\n本院・長浦駅前院・SANRIは院での施術や受付への関心、伊藤リハビリセンターは訪問サービスへの関心の入口です。\n\n福祉の仕事は、グループホーム・デイサービスの紹介から確認できます。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "4px",
+        "paddingAll": "12px",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "イトー鍼灸整骨院",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "イトー鍼灸整骨院",
+              "text": "職場：本院"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "ストレッチ鍼灸イトー整骨院",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "ストレッチ鍼灸イトー整骨院",
+              "text": "職場：長浦"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "SANRI鍼灸整骨院",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "SANRI鍼灸整骨院",
+              "text": "職場：SANRI"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "伊藤リハビリセンター",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "伊藤リハビリセンター",
+              "text": "職場：訪問"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "福祉の仕事を知る",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "福祉の仕事を知る",
+              "text": "仕事紹介：グループホーム"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "会社・職場情報",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "会社・職場情報",
+              "text": "会社・職場情報"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "続きから答える",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "職種と仕事内容\nこんにちは。気になるお仕事から、見てみませんか？\n\n治療院での施術・受付、訪問マッサージ、暮らしを支える福祉のお仕事をご紹介します。\n\nまだ迷っていても大丈夫。募集枠や詳しい条件は、担当者と確認できます。",
+    "contents": {
+      "type": "bubble",
+      "size": "mega",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "職種と仕事内容",
+            "weight": "bold",
+            "size": "md",
+            "color": "#31584C",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "12px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "こんにちは。気になるお仕事から、見てみませんか？\n\n治療院での施術・受付、訪問マッサージ、暮らしを支える福祉のお仕事をご紹介します。\n\nまだ迷っていても大丈夫。募集枠や詳しい条件は、担当者と確認できます。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "4px",
+        "paddingAll": "12px",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "院での施術・受付",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "院での施術・受付",
+              "text": "仕事紹介：院での施術・受付"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "訪問マッサージ",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "訪問マッサージ",
+              "text": "仕事紹介：訪問マッサージ"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "グループホーム",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "グループホーム",
+              "text": "仕事紹介：グループホーム"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "デイサービス・介護",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "デイサービス・介護",
+              "text": "仕事紹介：デイサービス・介護"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "働き方から相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "働き方から相談",
+              "text": "働き方を選ぶ"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "続きから答える",
+              "text": "採用相談を再開"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "flex",
+    "altText": "よくある質問\n応募前に、気になることはありませんか？\n資格、働き方、見学の流れなど、知りたいところから見てみてください。",
+    "contents": {
+      "type": "bubble",
+      "size": "mega",
+      "header": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "よくある質問",
+            "weight": "bold",
+            "size": "md",
+            "color": "#31584C",
+            "wrap": true
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "paddingAll": "12px",
+        "contents": [
+          {
+            "type": "text",
+            "text": "応募前に、気になることはありませんか？\n資格、働き方、見学の流れなど、知りたいところから見てみてください。",
+            "size": "md",
+            "color": "#263B47",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "4px",
+        "paddingAll": "12px",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "資格・未経験",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "資格・未経験",
+              "text": "FAQ：資格・未経験"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "給与・休日・待遇",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "給与・休日・待遇",
+              "text": "FAQ：給与・休日・待遇"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "見学の流れ",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "見学の流れ",
+              "text": "FAQ：見学の流れ"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "副業・勤務回数",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "副業・勤務回数",
+              "text": "FAQ：副業・勤務回数"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "夜勤の働き方",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
+            "action": {
+              "type": "message",
+              "label": "夜勤の働き方",
+              "text": "FAQ：夜勤の働き方"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "応募後・個人情報",
+                "size": "14px",
+                "color": "#31584C",
                 "wrap": true
               }
             ],
