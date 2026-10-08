@@ -11,9 +11,11 @@ export function verifyLineSignature(rawBody: string, signature: string | null) {
     .update(rawBody)
     .digest("base64");
 
-  return crypto.timingSafeEqual(
-    Buffer.from(expected),
-    Buffer.from(signature),
+  const expectedBytes = Buffer.from(expected);
+  const signatureBytes = Buffer.from(signature);
+  return (
+    expectedBytes.length === signatureBytes.length &&
+    crypto.timingSafeEqual(expectedBytes, signatureBytes)
   );
 }
 
