@@ -14,7 +14,12 @@ async function api(path, { method = 'GET', body, image = false } = {}) {
   });
   if (!response.ok) {
     if (response.status === 404 && method === 'GET') return null;
-    throw new Error(`LINE API ${method} ${path}: HTTP ${response.status}`);
+    let detail = '';
+    if (path === '/message/validate/reply') {
+      const error = await response.json().catch(() => ({}));
+      detail = JSON.stringify({ message: error.message, details: error.details }).slice(0, 2000);
+    }
+    throw new Error(`LINE API ${method} ${path}: HTTP ${response.status} ${detail}`);
   }
   const text = await response.text();
   const data = text ? JSON.parse(text) : {};
