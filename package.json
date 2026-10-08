@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && if [ \"$VERCEL_ENV\" = \"production\" ]; then node scripts/install-rich-menus.mjs --publish; fi",
+    "build": "next build && if [ \"$VERCEL_ENV\" = \"production\" ]; then node scripts/verify-large-menu.mjs; fi",
     "start": "next start",
     "lint": "next lint"
   },
