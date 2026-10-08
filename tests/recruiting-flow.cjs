@@ -91,9 +91,9 @@ check(() => {
   assert.equal(interested.state.entry,'work');
   const working = next(initialState(),'働き方：パート');
   assert.equal(working.state.answers.employment,'パートを希望');
-  assert.match(working.reply.text,/副業/);
+  assert.ok(working.reply.choices.some(c=>c.text==='副業を希望'));
   const afterSideJob = next(working.state,'副業ではない');
-  assert.match(afterSideJob.reply.text,/勤務回数/);
+  assert.ok(afterSideJob.reply.choices.some(c=>c.text==='週4回以上'));
   const visit = next(initialState(),'見学する仕事：グループホーム');
   let v = next(visit.state,'生活支援・夜間見守り');
   assert.match(v.reply.text,/見学の候補/);
@@ -126,9 +126,10 @@ check(() => {
     const r=next(initialState(),cmd).reply;
     const message=buildLineMessage(r);
     assert.equal(message.type,'flex');
-    assert.equal(message.contents.size,'giga');
+    assert.equal(message.contents.size,'mega');
     for(const b of message.contents.footer.contents) {
-      assert.equal(b.height,'md');
+      assert.equal(b.height,'44px');
+      assert.equal(b.type,'box');assert.equal(b.contents[0].wrap,true);
       assert.ok(b.action.label.length<=40);
       assert.ok(b.action.type==='uri' ? b.action.uri.startsWith('https://') : b.action.text);
       if(b.action.type==='uri')assert.ok(/^[\x00-\x7F]+$/.test(b.action.uri));
@@ -144,7 +145,15 @@ check(() => {
   for(const cmd of ['お仕事を探す','仕事内容']) assert.deepEqual(Array.from(next(initialState(),cmd).reply.choices.slice(0,4),c=>c.label),expected);
   expected.forEach((name,i)=>{const s=next(initialState(),String(i+1)).state;assert.equal(s.answers.work,name);assert.equal(departmentOf(s),i<2?'therapy':'welfare');});
   const clinic=next(initialState(),'1').state;assert.equal(promptFor(clinic).choices[0].text,'施術');
-  assert.match(promptFor(next(initialState(),'3').state).text,/生活支援/);
-  assert.match(promptFor(next(initialState(),'4').state).text,/介護/);
+  assert.equal(promptFor(next(initialState(),'3').state).choices[0].text,'生活支援・夜間見守り');
+  assert.equal(promptFor(next(initialState(),'4').state).choices[0].text,'介護');
+});
+check(() => {
+ const a=JSON.parse(fs.readFileSync(path.join(__dirname,'../rich-menu/recruiting.json'))),b=JSON.parse(fs.readFileSync(path.join(__dirname,'../rich-menu/company.json')));
+ assert.deepEqual(a.size,b.size);assert.deepEqual(a.areas.map(x=>x.bounds),b.areas.map(x=>x.bounds));
+ assert.equal(a.chatBarText,b.chatBarText);assert.equal(a.selected,b.selected);
+ for(const d of [a,b])for(const x of d.areas)assert.ok(x.bounds.x+x.bounds.width<=d.size.width&&x.bounds.y+x.bounds.height<=d.size.height);
+ const q=promptFor(initialState());assert.ok(!q.text.includes('1.'));assert.equal(q.choices[0].text,'院での施術・受付');
+ const reply=buildLineMessage(q);assert.equal(reply.contents.footer.spacing,'4px');assert.ok(reply.contents.footer.contents.every(c=>c.height==='44px'&&c.action.text));
 });
 console.log(`${checks} recruiting flow test groups passed`);

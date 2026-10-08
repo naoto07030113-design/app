@@ -39,7 +39,7 @@ const previousDefault = saved && saved.menus?.recruiting && saved.menus.recruiti
 const result = { previousDefault, menus: {} };
 for (const name of ['recruiting', 'company']) {
   const definition = JSON.parse(await readFile(new URL(`${name}.json`, root), 'utf8'));
-  const alias = `ito-${name}-large-20261008`;
+  const alias = `ito-${name}-stable-20261008`;
   await api('/richmenu/validate', { method: 'POST', body: definition });
   let menu = existing.richmenus.find(m => m.name === definition.name);
   const oldAlias = aliases.aliases.find(a => a.richMenuAliasId === alias);
@@ -58,19 +58,23 @@ await writeFile(new URL('installation-result.json', root), JSON.stringify(result
 if (args.has('--publish')) {
   await api(`/user/all/richmenu/${result.menus.recruiting}`, { method: 'POST' });
   // Redirect only the two aliases owned by our previous recruiting menus.
-  const previousMenus = { recruiting: 'richmenu-a484858a82d1cbcec6cb5196d938f296', company: 'richmenu-8f851944eca6f0de560ef223f2f89300' };
+  const previousMenus = { recruiting: 'richmenu-2b5b963461911d1418f0bfc5bfd1cf73', company: 'richmenu-777a3f96086540342553702439214d4f' };
   for (const name of ['recruiting', 'company']) {
-    const alias = aliases.aliases.find(a => a.richMenuAliasId === `ito-${name}-20261008`);
+    const alias = aliases.aliases.find(a => a.richMenuAliasId === `ito-${name}-large-20261008`);
     if (alias && alias.richMenuId === previousMenus[name]) await api(`/richmenu/alias/${alias.richMenuAliasId}`, { method: 'POST', body: { richMenuId: result.menus[name] } });
   }
-  const operations = Object.entries(previousMenus).filter(([name, id]) => existing.richmenus.some(m => m.richMenuId === id && m.name === `ito-recruiting-${name}-20261008`)).map(([name, id]) => ({ type: 'link', from: id, to: result.menus[name] }));
+  const operations = Object.entries(previousMenus).filter(([name, id]) => existing.richmenus.some(m => m.richMenuId === id && m.name === `ito-recruiting-${name}-large-20261008`)).map(([name, id]) => ({ type: 'link', from: id, to: result.menus[name] }));
   if (operations.length) {
-    const body = { operations, resumeRequestKey: 'ito-menu-large-20261008' };
+    const body = { operations, resumeRequestKey: 'ito-menu-stable-20261008' };
     await api('/richmenu/validate/batch', { method: 'POST', body });
     const accepted = await api('/richmenu/batch', { method: 'POST', body });
     if (!accepted.requestId) throw new Error('LINE did not return a batch request ID.');
     result.migrationRequestId = accepted.requestId;
     result.migration = await api(`/richmenu/progress/batch?requestId=${encodeURIComponent(accepted.requestId)}`);
+    for (let check = 0; result.migration?.phase === 'ongoing' && check < 18; check++) {
+      await new Promise(resolve => setTimeout(resolve, 5000));
+      result.migration = await api(`/richmenu/progress/batch?requestId=${encodeURIComponent(accepted.requestId)}`);
+    }
     if (result.migration?.phase === 'failed') throw new Error('Rich-menu migration failed; retry with the same resumeRequestKey.');
   }
   const actual = await api('/user/all/richmenu');

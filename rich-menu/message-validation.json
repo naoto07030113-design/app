@@ -1,22 +1,25 @@
+Warning: truncated output (original token count: 22998)
+Total output lines: 2876
+
 [
   {
     "type": "flex",
-    "altText": "お仕事を探す\n仕事内容から、自分に合いそうな仕事を見つけてみませんか。\n\n地域の健康を支える治療院・訪問の仕事と、暮らしを支える福祉の仕事を、職種ごとに紹介します。気になる仕事を選ぶと、業務と相談する条件が見られます。\n\n現在の募集枠は担当者が確認します。",
+    "altText": "お仕事を探す\nこんにちは。気になるお仕事から、見てみませんか？\n\n治療院での施術・受付、訪問マッサージ、暮らしを支える福祉のお仕事をご紹介します。\n\nまだ迷っていても大丈夫。募集枠や詳しい条件は、担当者と確認できます。",
     "contents": {
       "type": "bubble",
-      "size": "giga",
+      "size": "mega",
       "header": {
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
             "text": "お仕事を探す",
             "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
+            "size": "md",
+            "color": "#31584C",
             "wrap": true
           }
         ]
@@ -24,11 +27,11 @@
       "body": {
         "type": "box",
         "layout": "vertical",
-        "paddingAll": "16px",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
-            "text": "仕事内容から、自分に合いそうな仕事を見つけてみませんか。\n\n地域の健康を支える治療院・訪問の仕事と、暮らしを支える福祉の仕事を、職種ごとに紹介します。気になる仕事を選ぶと、業務と相談する条件が見られます。\n\n現在の募集枠は担当者が確認します。",
+            "text": "こんにちは。気になるお仕事から、見てみませんか？\n\n治療院での施術・受付、訪問マッサージ、暮らしを支える福祉のお仕事をご紹介します。\n\nまだ迷っていても大丈夫。募集枠や詳しい条件は、担当者と確認できます。",
             "size": "md",
             "color": "#263B47",
             "wrap": true
@@ -38,14 +41,29 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
+        "spacing": "4px",
+        "paddingAll": "12px",
         "contents": [
           {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "院での施術・受付",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "院での施術・受付",
@@ -53,9 +71,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "訪問マッサージ",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "訪問マッサージ",
@@ -63,9 +97,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "グループホーム",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "グループホーム",
@@ -73,9 +123,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "デイサービス・介護",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "デイサービス・介護",
@@ -83,9 +149,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "働き方から相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "働き方から相談",
@@ -93,12 +175,28 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
-              "label": "保存した回答の続きへ",
+              "label": "続きから答える",
               "text": "採用相談を再開"
             }
           }
@@ -108,22 +206,22 @@
   },
   {
     "type": "flex",
-    "altText": "働き方を相談\n勤務条件から希望を整理する入口です。仕事内容をまだ決めていなくても進められます。\n\n正社員：希望する雇用形態を先に整理。\nパート：勤務回数・曜日を中心に相談。\n副業：雇用形態とは分けて、副業希望を記録。\n夜間：グループホームの時間帯から相談。\n\n条件を選んだあとに、興味のある仕事を伺います。",
+    "altText": "働き方を相談\nあなたの暮らしに合う働き方を、一緒に考えてみませんか？\n\n正社員でしっかり働きたい、パートで曜日や回数を相談したい、今の仕事と両立したい。近いものを選んでください。\n\nお仕事がまだ決まっていなくても大丈夫です。夜間はグループホームの働き方をご案内します。",
     "contents": {
       "type": "bubble",
-      "size": "giga",
+      "size": "mega",
       "header": {
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
             "text": "働き方を相談",
             "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
+            "size": "md",
+            "color": "#31584C",
             "wrap": true
           }
         ]
@@ -131,11 +229,11 @@
       "body": {
         "type": "box",
         "layout": "vertical",
-        "paddingAll": "16px",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
-            "text": "勤務条件から希望を整理する入口です。仕事内容をまだ決めていなくても進められます。\n\n正社員：希望する雇用形態を先に整理。\nパート：勤務回数・曜日を中心に相談。\n副業：雇用形態とは分けて、副業希望を記録。\n夜間：グループホームの時間帯から相談。\n\n条件を選んだあとに、興味のある仕事を伺います。",
+            "text": "あなたの暮らしに合う働き方を、一緒に考えてみませんか？\n\n正社員でしっかり働きたい、パートで曜日や回数を相談したい、今の仕事と両立したい。近いものを選んでください。\n\nお仕事がまだ決まっていなくても大丈夫です。夜間はグループホームの働き方をご案内します。",
             "size": "md",
             "color": "#263B47",
             "wrap": true
@@ -145,14 +243,29 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
+        "spacing": "4px",
+        "paddingAll": "12px",
         "contents": [
           {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "正社員として相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "正社員として相談",
@@ -160,9 +273,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "パートとして相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "パートとして相談",
@@ -170,9 +299,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "副業として相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "副業として相談",
@@ -180,9 +325,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "夜間の働き方を相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "夜間の働き方を相談",
@@ -190,9 +351,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "条件を相談しながら決める",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "条件を相談しながら決める",
@@ -200,12 +377,28 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
-              "label": "保存した回答の続きへ",
+              "label": "続きから答える",
               "text": "採用相談を再開"
             }
           }
@@ -215,22 +408,22 @@
   },
   {
     "type": "flex",
-    "altText": "見学・応募\nまず職場を見てから決めたい方と、応募を進めたい方の入口を分けています。\n\n見学：希望する事業・職種・見学可能な時間帯を伺い、確認依頼にまとめます。\n\n応募：仕事・資格・働き方・開始希望を整理して、応募希望として確認依頼にまとめます。\n\n選択だけで日程や採用は確定しません。途中の回答は使える範囲で引き継ぎます。",
+    "altText": "見学・応募\nまずは雰囲気を見てみたいですか？それとも応募を考えていますか？\n\n見学なら、気になる仕事と都合のよい時間帯を。応募なら、資格や働き方の希望を少しずつ教えてください。\n\n日程や詳しい条件は担当者と相談しましょう。途中までの回答も引き継げます。",
     "contents": {
       "type": "bubble",
-      "size": "giga",
+      "size": "mega",
       "header": {
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
             "text": "見学・応募",
             "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
+            "size": "md",
+            "color": "#31584C",
             "wrap": true
           }
         ]
@@ -238,11 +431,11 @@
       "body": {
         "type": "box",
         "layout": "vertical",
-        "paddingAll": "16px",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
-            "text": "まず職場を見てから決めたい方と、応募を進めたい方の入口を分けています。\n\n見学：希望する事業・職種・見学可能な時間帯を伺い、確認依頼にまとめます。\n\n応募：仕事・資格・働き方・開始希望を整理して、応募希望として確認依頼にまとめます。\n\n選択だけで日程や採用は確定しません。途中の回答は使える範囲で引き継ぎます。",
+            "text": "まずは雰囲気を見てみたいですか？それとも応募を考えていますか？\n\n見学なら、気になる仕事と都合のよい時間帯を。応募なら、資格や働き方の希望を少しずつ教えてください。\n\n日程や詳しい条件は担当者と相談しましょう。途中までの回答も引き継げます。",
             "size": "md",
             "color": "#263B47",
             "wrap": true
@@ -252,14 +445,29 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
+        "spacing": "4px",
+        "paddingAll": "12px",
         "contents": [
           {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "まず見学を希望",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "まず見学を希望",
@@ -267,9 +475,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "応募の希望を入力",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "応募の希望を入力",
@@ -277,9 +501,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "見学の流れを詳しく",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "見学の流れを詳しく",
@@ -287,12 +527,28 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
-              "label": "保存した回答の続きへ",
+              "label": "続きから答える",
               "text": "採用相談を再開"
             }
           }
@@ -302,22 +558,22 @@
   },
   {
     "type": "flex",
-    "altText": "担当者と相談\n聞きたいことを選んでください。次に相談内容を自由に入力できます。\n勤務条件、業務の不安、応募前の確認などを相談内容として保存します。",
+    "altText": "担当者と相談\n気になること、聞いてみたいことはありますか？\n項目を選んだあと、自由に書いていただけます。",
     "contents": {
       "type": "bubble",
-      "size": "giga",
+      "size": "mega",
       "header": {
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
             "text": "担当者と相談",
             "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
+            "size": "md",
+            "color": "#31584C",
             "wrap": true
           }
         ]
@@ -325,11 +581,11 @@
       "body": {
         "type": "box",
         "layout": "vertical",
-        "paddingAll": "16px",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
-            "text": "聞きたいことを選んでください。次に相談内容を自由に入力できます。\n勤務条件、業務の不安、応募前の確認などを相談内容として保存します。",
+            "text": "気になること、聞いてみたいことはありますか？\n項目を選んだあと、自由に書いていただけます。",
             "size": "md",
             "color": "#263B47",
             "wrap": true
@@ -339,14 +595,29 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
+        "spacing": "4px",
+        "paddingAll": "12px",
         "contents": [
           {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "仕事内容を相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "仕事内容を相談",
@@ -354,9 +625,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "勤務条件を相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "勤務条件を相談",
@@ -364,9 +651,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "給与・待遇を相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "給与・待遇を相談",
@@ -374,9 +677,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "見学・応募を相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "見学・応募を相談",
@@ -384,9 +703,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "その他を相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "その他を相談",
@@ -394,9 +729,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "採用相談を再開",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "採用相談を再開",
@@ -412,19 +763,19 @@
     "altText": "イトーメディカルケアを知る\n千葉県の袖ケ浦・木更津・富津の地域で、鍼灸整骨院や訪問リハビリマッサージを通じた健康のサポートを紹介しています。\n\nこの採用窓口では、グループホームやデイサービスなど福祉の仕事への関心も伺います。\n\n会社の歩み、職場の特徴、仕事の内容をそれぞれの入口で確認できます。公式HP：https://ito-chiryoin.com/",
     "contents": {
       "type": "bubble",
-      "size": "giga",
+      "size": "mega",
       "header": {
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
             "text": "イトーメディカルケアを知る",
             "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
+            "size": "md",
+            "color": "#31584C",
             "wrap": true
           }
         ]
@@ -432,7 +783,7 @@
       "body": {
         "type": "box",
         "layout": "vertical",
-        "paddingAll": "16px",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
@@ -446,14 +797,29 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
+        "spacing": "4px",
+        "paddingAll": "12px",
         "contents": [
           {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "公式ページを開く",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "uri",
               "label": "公式ページを開く",
@@ -461,9 +827,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "私たちについて",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "私たちについて",
@@ -471,9 +853,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "院・事業を知る",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "院・事業を知る",
@@ -481,9 +879,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "お仕事の紹介",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "お仕事の紹介",
@@ -491,9 +905,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "よくある質問",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "よくある質問",
@@ -501,12 +931,28 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
-              "label": "保存した回答の続きへ",
+              "label": "続きから答える",
               "text": "採用相談を再開"
             }
           }
@@ -519,19 +965,19 @@
     "altText": "私たちについて\n1995年11月、袖ケ浦で伊藤鍼灸院を開業したことから始まりました。\n\n会社案内では、一人ひとりに向き合い、地域の健康を支える姿勢を大切にしています。施術や訪問サービスを通じて、患者さんと地域の期待に応えることを目指しています。\n\n会社名：有限会社イトーメディカルケア\n所在地：千葉県袖ケ浦市野里1770-3\n\n代表挨拶・企業理念・会社概要：\nhttps://ito-chiryoin.com/会社案内/",
     "contents": {
       "type": "bubble",
-      "size": "giga",
+      "size": "mega",
       "header": {
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
             "text": "私たちについて",
             "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
+            "size": "md",
+            "color": "#31584C",
             "wrap": true
           }
         ]
@@ -539,7 +985,7 @@
       "body": {
         "type": "box",
         "layout": "vertical",
-        "paddingAll": "16px",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
@@ -553,14 +999,29 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
+        "spacing": "4px",
+        "paddingAll": "12px",
         "contents": [
           {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "公式ページを開く",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "uri",
               "label": "公式ページを開く",
@@ -568,9 +1029,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "院・事業を知る",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "院・事業を知る",
@@ -578,9 +1055,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "お仕事の紹介",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "お仕事の紹介",
@@ -588,9 +1081,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "会社・職場情報",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "会社・職場情報",
@@ -598,340 +1107,17 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "保存した回答の続きへ",
-              "text": "採用相談を再開"
-            }
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "flex",
-    "altText": "院・事業を知る\n職場ごとの特徴を選んで確認できます。\n\n本院・長浦駅前院・SANRIは院での施術や受付への関心、伊藤リハビリセンターは訪問サービスへの関心の入口です。\n\n福祉の仕事は、グループホーム・デイサービスの紹介から確認できます。",
-    "contents": {
-      "type": "bubble",
-      "size": "giga",
-      "header": {
-        "type": "box",
-        "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
-        "contents": [
-          {
-            "type": "text",
-            "text": "院・事業を知る",
-            "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
-            "wrap": true
-          }
-        ]
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "paddingAll": "16px",
-        "contents": [
-          {
-            "type": "text",
-            "text": "職場ごとの特徴を選んで確認できます。\n\n本院・長浦駅前院・SANRIは院での施術や受付への関心、伊藤リハビリセンターは訪問サービスへの関心の入口です。\n\n福祉の仕事は、グループホーム・デイサービスの紹介から確認できます。",
-            "size": "md",
-            "color": "#263B47",
-            "wrap": true
-          }
-        ]
-      },
-      "footer": {
-        "type": "box",
-        "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
-        "contents": [
-          {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
-            "action": {
-              "type": "message",
-              "label": "イトー鍼灸整骨院",
-              "text": "職場：本院"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "ストレッチ鍼灸イトー整骨院",
-              "text": "職場：長浦"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "SANRI鍼灸整骨院",
-              "text": "職場：SANRI"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "伊藤リハビリセンター",
-              "text": "職場：訪問"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "福祉の仕事を知る",
-              "text": "仕事紹介：グループホーム"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "会社・職場情報",
-              "text": "会社・職場情報"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "保存した回答の続きへ",
-              "text": "採用相談を再開"
-            }
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "flex",
-    "altText": "職種と仕事内容\n仕事内容から、自分に合いそうな仕事を見つけてみませんか。\n\n地域の健康を支える治療院・訪問の仕事と、暮らしを支える福祉の仕事を、職種ごとに紹介します。気になる仕事を選ぶと、業務と相談する条件が見られます。\n\n現在の募集枠は担当者が確認します。",
-    "contents": {
-      "type": "bubble",
-      "size": "giga",
-      "header": {
-        "type": "box",
-        "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
-        "contents": [
-          {
-            "type": "text",
-            "text": "職種と仕事内容",
-            "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
-            "wrap": true
-          }
-        ]
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "paddingAll": "16px",
-        "contents": [
-          {
-            "type": "text",
-            "text": "仕事内容から、自分に合いそうな仕事を見つけてみませんか。\n\n地域の健康を支える治療院・訪問の仕事と、暮らしを支える福祉の仕事を、職種ごとに紹介します。気になる仕事を選ぶと、業務と相談する条件が見られます。\n\n現在の募集枠は担当者が確認します。",
-            "size": "md",
-            "color": "#263B47",
-            "wrap": true
-          }
-        ]
-      },
-      "footer": {
-        "type": "box",
-        "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
-        "contents": [
-          {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
-            "action": {
-              "type": "message",
-              "label": "院での施術・受付",
-              "text": "仕事紹介：院での施術・受付"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "訪問マッサージ",
-              "text": "仕事紹介：訪問マッサージ"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "グループホーム",
-              "text": "仕事紹介：グループホーム"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "デイサービス・介護",
-              "text": "仕事紹介：デイサービス・介護"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "働き方から相談",
-              "text": "働き方を選ぶ"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "保存した回答の続きへ",
-              "text": "採用相談を再開"
-            }
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "flex",
-    "altText": "よくある質問\n気になる項目を選んでください。\n\n仕事を選ぶ前の疑問、夜勤・副業の働き方、見学や応募の流れを項目ごとに確認できます。",
-    "contents": {
-      "type": "bubble",
-      "size": "giga",
-      "header": {
-        "type": "box",
-        "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
-        "contents": [
-          {
-            "type": "text",
-            "text": "よくある質問",
-            "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
-            "wrap": true
-          }
-        ]
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "paddingAll": "16px",
-        "contents": [
-          {
-            "type": "text",
-            "text": "気になる項目を選んでください。\n\n仕事を選ぶ前の疑問、夜勤・副業の働き方、見学や応募の流れを項目ごとに確認できます。",
-            "size": "md",
-            "color": "#263B47",
-            "wrap": true
-          }
-        ]
-      },
-      "footer": {
-        "type": "box",
-        "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
-        "contents": [
-          {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
-            "action": {
-              "type": "message",
-              "label": "資格・未経験",
-              "text": "FAQ：資格・未経験"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "給与・休日・待遇",
-              "text": "FAQ：給与・休日・待遇"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "見学の流れ",
-              "text": "FAQ：見学の流れ"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "副業・勤務回数",
-              "text": "FAQ：副業・勤務回数"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
-            "action": {
-              "type": "message",
-              "label": "夜勤の働き方",
-              "text": "FAQ：夜勤の働き方"
-            }
-          },
-          {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundCo…4998 tokens truncated…r": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "応募後・個人情報",
@@ -939,9 +1125,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "個別に担当者へ相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "個別に担当者へ相談",
@@ -949,12 +1151,28 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
-              "label": "保存した回答の続きへ",
+              "label": "続きから答える",
               "text": "採用相談を再開"
             }
           }
@@ -964,22 +1182,22 @@
   },
   {
     "type": "flex",
-    "altText": "給与・休日・待遇\n給与、手当、休日、保険や交通費などは、職種・雇用形態・勤務条件により確認が必要です。このトークでは未確認の金額や待遇を確約しません。\n\n希望の仕事と働き方を選ぶと、担当者への確認事項を整理できます。「担当者と相談」では給与・待遇を相談項目として選べます。",
+    "altText": "給与・休日・待遇\n給与やお休みは、働くうえで大切ですよね。職種・雇用形態・勤務条件によって変わるため、担当者と詳しく確認しましょう。\n\n希望の仕事と働き方を選ぶと、担当者に聞きたいことをまとめられます。「担当者と相談」では給与・待遇を相談項目として選べます。",
     "contents": {
       "type": "bubble",
-      "size": "giga",
+      "size": "mega",
       "header": {
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
             "text": "給与・休日・待遇",
             "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
+            "size": "md",
+            "color": "#31584C",
             "wrap": true
           }
         ]
@@ -987,11 +1205,11 @@
       "body": {
         "type": "box",
         "layout": "vertical",
-        "paddingAll": "16px",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
-            "text": "給与、手当、休日、保険や交通費などは、職種・雇用形態・勤務条件により確認が必要です。このトークでは未確認の金額や待遇を確約しません。\n\n希望の仕事と働き方を選ぶと、担当者への確認事項を整理できます。「担当者と相談」では給与・待遇を相談項目として選べます。",
+            "text": "給与やお休みは、働くうえで大切ですよね。職種・雇用形態・勤務条件によって変わるため、担当者と詳しく確認しましょう。\n\n希望の仕事と働き方を選ぶと、担当者に聞きたいことをまとめられます。「担当者と相談」では給与・待遇を相談項目として選べます。",
             "size": "md",
             "color": "#263B47",
             "wrap": true
@@ -1001,14 +1219,29 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
+        "spacing": "4px",
+        "paddingAll": "12px",
         "contents": [
           {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "他の質問を見る",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "他の質問を見る",
@@ -1016,9 +1249,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "見学・応募",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "見学・応募",
@@ -1026,9 +1275,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "働き方を相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "働き方を相談",
@@ -1036,9 +1301,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "担当者に相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "担当者に相談",
@@ -1046,12 +1327,28 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
-              "label": "保存した回答の続きへ",
+              "label": "続きから答える",
               "text": "採用相談を再開"
             }
           }
@@ -1061,22 +1358,22 @@
   },
   {
     "type": "flex",
-    "altText": "見学の流れ\n見学は、希望する事業と時間帯をこのトークで整理し、最後に確認依頼を保存する流れです。職場の雰囲気、実際の業務、勤務条件を確認する入口として利用できます。\n\n日時・場所はこの画面で確定しません。希望を選んだあと、担当者による調整が必要です。持ち物や当日の案内も、その際に確認してください。",
+    "altText": "見学の流れ\n見学は、希望する事業と時間帯をこのトークで整理し、最後に担当者へ確認するための希望を残します。職場の雰囲気、実際の業務、勤務条件を確認する入口として利用できます。\n\n日時・場所はこの画面で確定しません。希望を教えていただいたあと、担当者と日程を相談しましょう。持ち物や当日の案内も、その際に確認してください。",
     "contents": {
       "type": "bubble",
-      "size": "giga",
+      "size": "mega",
       "header": {
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
             "text": "見学の流れ",
             "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
+            "size": "md",
+            "color": "#31584C",
             "wrap": true
           }
         ]
@@ -1084,11 +1381,11 @@
       "body": {
         "type": "box",
         "layout": "vertical",
-        "paddingAll": "16px",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
-            "text": "見学は、希望する事業と時間帯をこのトークで整理し、最後に確認依頼を保存する流れです。職場の雰囲気、実際の業務、勤務条件を確認する入口として利用できます。\n\n日時・場所はこの画面で確定しません。希望を選んだあと、担当者による調整が必要です。持ち物や当日の案内も、その際に確認してください。",
+            "text": "見学は、希望する事業と時間帯をこのトークで整理し、最後に担当者へ確認するための希望を残します。職場の雰囲気、実際の業務、勤務条件を確認する入口として利用できます。\n\n日時・場所はこの画面で確定しません。希望を教えていただいたあと、担当者と日程を相談しましょう。持ち物や当日の案内も、その際に確認してください。",
             "size": "md",
             "color": "#263B47",
             "wrap": true
@@ -1098,14 +1395,29 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
+        "spacing": "4px",
+        "paddingAll": "12px",
         "contents": [
           {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "他の質問を見る",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "他の質問を見る",
@@ -1113,9 +1425,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "見学・応募",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "見学・応募",
@@ -1123,9 +1451,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "働き方を相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "働き方を相談",
@@ -1133,9 +1477,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "担当者に相談",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "担当者に相談",
@@ -1143,12 +1503,28 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
-              "label": "保存した回答の続きへ",
+              "label": "続きから答える",
               "text": "採用相談を再開"
             }
           }
@@ -1158,22 +1534,22 @@
   },
   {
     "type": "flex",
-    "altText": "イトー鍼灸整骨院\n袖ケ浦市野里1770-3。鍼灸整骨院の本院です。院での施術・受付の役割を知りたい方はこちら。\nhttps://ito-chiryoin.com/honin/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+    "altText": "イトー鍼灸整骨院\n袖ケ浦市野里1770-3。鍼灸整骨院の本院です。院での施術・受付の役割を知りたい方はこちら。\nhttps://ito-chiryoin.com/honin/\n\n気になる職場があれば、見学や働き方を相談してみませんか？募集枠や配属の希望は、担当者と確認しましょう。",
     "contents": {
       "type": "bubble",
-      "size": "giga",
+      "size": "mega",
       "header": {
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
             "text": "イトー鍼灸整骨院",
             "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
+            "size": "md",
+            "color": "#31584C",
             "wrap": true
           }
         ]
@@ -1181,11 +1557,11 @@
       "body": {
         "type": "box",
         "layout": "vertical",
-        "paddingAll": "16px",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
-            "text": "袖ケ浦市野里1770-3。鍼灸整骨院の本院です。院での施術・受付の役割を知りたい方はこちら。\nhttps://ito-chiryoin.com/honin/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+            "text": "袖ケ浦市野里1770-3。鍼灸整骨院の本院です。院での施術・受付の役割を知りたい方はこちら。\nhttps://ito-chiryoin.com/honin/\n\n気になる職場があれば、見学や働き方を相談してみませんか？募集枠や配属の希望は、担当者と確認しましょう。",
             "size": "md",
             "color": "#263B47",
             "wrap": true
@@ -1195,14 +1571,29 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
+        "spacing": "4px",
+        "paddingAll": "12px",
         "contents": [
           {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "公式ページを開く",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "uri",
               "label": "公式ページを開く",
@@ -1210,9 +1601,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "関連する仕事を見る",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "関連する仕事を見る",
@@ -1220,9 +1627,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "別の院・事業を見る",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "別の院・事業を見る",
@@ -1230,9 +1653,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "見学・応募",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "見学・応募",
@@ -1240,12 +1679,28 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
-              "label": "保存した回答の続きへ",
+              "label": "続きから答える",
               "text": "採用相談を再開"
             }
           }
@@ -1255,22 +1710,22 @@
   },
   {
     "type": "flex",
-    "altText": "ストレッチ鍼灸イトー整骨院\n長浦駅前院として、ストレッチや鍼灸などの情報を発信しています。詳しい施術内容・アクセスは院のHPで確認できます。\nhttps://www.str-ito-chiryoin.com/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+    "altText": "ストレッチ鍼灸イトー整骨院\n長浦駅前院として、ストレッチや鍼灸などの情報を発信しています。詳しい施術内容・アクセスは院のHPで確認できます。\nhttps://www.str-ito-chiryoin.com/\n\n気になる職場があれば、見学や働き方を相談してみませんか？募集枠や配属の希望は、担当者と確認しましょう。",
     "contents": {
       "type": "bubble",
-      "size": "giga",
+      "size": "mega",
       "header": {
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
             "text": "ストレッチ鍼灸イトー整骨院",
             "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
+            "size": "md",
+            "color": "#31584C",
             "wrap": true
           }
         ]
@@ -1278,11 +1733,11 @@
       "body": {
         "type": "box",
         "layout": "vertical",
-        "paddingAll": "16px",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
-            "text": "長浦駅前院として、ストレッチや鍼灸などの情報を発信しています。詳しい施術内容・アクセスは院のHPで確認できます。\nhttps://www.str-ito-chiryoin.com/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+            "text": "長浦駅前院として、ストレッチや鍼灸などの情報を発信しています。詳しい施術内容・アクセスは院のHPで確認できます。\nhttps://www.str-ito-chiryoin.com/\n\n気になる職場があれば、見学や働き方を相談してみませんか？募集枠や配属の希望は、担当者と確認しましょう。",
             "size": "md",
             "color": "#263B47",
             "wrap": true
@@ -1292,14 +1747,29 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
+        "spacing": "4px",
+        "paddingAll": "12px",
         "contents": [
           {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "公式ページを開く",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "uri",
               "label": "公式ページを開く",
@@ -1307,9 +1777,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "関連する仕事を見る",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "関連する仕事を見る",
@@ -1317,9 +1803,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "別の院・事業を見る",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "別の院・事業を見る",
@@ -1327,9 +1829,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "見学・応募",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "見学・応募",
@@ -1337,12 +1855,28 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
-              "label": "保存した回答の続きへ",
+              "label": "続きから答える",
               "text": "採用相談を再開"
             }
           }
@@ -1352,22 +1886,22 @@
   },
   {
     "type": "flex",
-    "altText": "SANRI鍼灸整骨院\n富津市にあるグループ院です。院の特徴や所在地は公式ページで確認できます。\nhttps://www.sanri-seikotsuin.com/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+    "altText": "SANRI鍼灸整骨院\n富津市にあるグループ院です。院の特徴や所在地は公式ページで確認できます。\nhttps://www.sanri-seikotsuin.com/\n\n気になる職場があれば、見学や働き方を相談してみませんか？募集枠や配属の希望は、担当者と確認しましょう。",
     "contents": {
       "type": "bubble",
-      "size": "giga",
+      "size": "mega",
       "header": {
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
             "text": "SANRI鍼灸整骨院",
             "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
+            "size": "md",
+            "color": "#31584C",
             "wrap": true
           }
         ]
@@ -1375,11 +1909,11 @@
       "body": {
         "type": "box",
         "layout": "vertical",
-        "paddingAll": "16px",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
-            "text": "富津市にあるグループ院です。院の特徴や所在地は公式ページで確認できます。\nhttps://www.sanri-seikotsuin.com/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+            "text": "富津市にあるグループ院です。院の特徴や所在地は公式ページで確認できます。\nhttps://www.sanri-seikotsuin.com/\n\n気になる職場があれば、見学や働き方を相談してみませんか？募集枠や配属の希望は、担当者と確認しましょう。",
             "size": "md",
             "color": "#263B47",
             "wrap": true
@@ -1389,14 +1923,29 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
+        "spacing": "4px",
+        "paddingAll": "12px",
         "contents": [
           {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "公式ページを開く",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "uri",
               "label": "公式ページを開く",
@@ -1404,9 +1953,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "関連する仕事を見る",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "関連する仕事を見る",
@@ -1414,9 +1979,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "別の院・事業を見る",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "別の院・事業を見る",
@@ -1424,9 +2005,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "見学・応募",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "見学・応募",
@@ -1434,12 +2031,28 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
-              "label": "保存した回答の続きへ",
+              "label": "続きから答える",
               "text": "採用相談を再開"
             }
           }
@@ -1449,22 +2062,22 @@
   },
   {
     "type": "flex",
-    "altText": "伊藤リハビリセンター\n通院が難しい方に向けて、訪問リハビリマッサージを紹介しています。ご自宅での暮らしを支えるサービスです。\nhttps://ito-chiryoin.com/reha/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+    "altText": "伊藤リハビリセンター\n通院が難しい方に向けて、訪問リハビリマッサージを紹介しています。ご自宅での暮らしを支えるサービスです。\nhttps://ito-chiryoin.com/reha/\n\n気になる職場があれば、見学や働き方を相談してみませんか？募集枠や配属の希望は、担当者と確認しましょう。",
     "contents": {
       "type": "bubble",
-      "size": "giga",
+      "size": "mega",
       "header": {
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "#E8F2F4",
-        "paddingAll": "16px",
+        "backgroundColor": "#F0F6F3",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
             "text": "伊藤リハビリセンター",
             "weight": "bold",
-            "size": "lg",
-            "color": "#102D3F",
+            "size": "md",
+            "color": "#31584C",
             "wrap": true
           }
         ]
@@ -1472,11 +2085,11 @@
       "body": {
         "type": "box",
         "layout": "vertical",
-        "paddingAll": "16px",
+        "paddingAll": "12px",
         "contents": [
           {
             "type": "text",
-            "text": "通院が難しい方に向けて、訪問リハビリマッサージを紹介しています。ご自宅での暮らしを支えるサービスです。\nhttps://ito-chiryoin.com/reha/\n\nこの院・事業への配属を確約する入口ではありません。仕事内容や配属の希望は、担当者が募集状況と合わせて確認します。",
+            "text": "通院が難しい方に向けて、訪問リハビリマッサージを紹介しています。ご自宅での暮らしを支えるサービスです。\nhttps://ito-chiryoin.com/reha/\n\n気になる職場があれば、見学や働き方を相談してみませんか？募集枠や配属の希望は、担当者と確認しましょう。",
             "size": "md",
             "color": "#263B47",
             "wrap": true
@@ -1486,14 +2099,29 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "8px",
-        "paddingAll": "16px",
+        "spacing": "4px",
+        "paddingAll": "12px",
         "contents": [
           {
-            "type": "button",
-            "height": "md",
-            "style": "primary",
-            "color": "#246A7C",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "公式ページを開く",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "uri",
               "label": "公式ページを開く",
@@ -1501,9 +2129,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "関連する仕事を見る",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "関連する仕事を見る",
@@ -1511,9 +2155,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "別の院・事業を見る",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "別の院・事業を見る",
@@ -1521,9 +2181,25 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "見学・応募",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
               "label": "見学・応募",
@@ -1531,12 +2207,28 @@
             }
           },
           {
-            "type": "button",
-            "height": "md",
-            "style": "secondary",
+            "type": "box",
+            "layout": "vertical",
+            "height": "44px",
+            "justifyContent": "center",
+            "paddingStart": "12px",
+            "paddingEnd": "12px",
+            "cornerRadius": "10px",
+            "backgroundColor": "#F0F6F3",
+            "borderColor": "#DCE8E1",
+            "borderWidth": "1px",
+            "contents": [
+              {
+                "type": "text",
+                "text": "続きから答える",
+                "size": "14px",
+                "color": "#31584C",
+                "wrap": true
+              }
+            ],
             "action": {
               "type": "message",
-              "label": "保存した回答の続きへ",
+              "label": "続きから答える",
               "text": "採用相談を再開"
             }
           }

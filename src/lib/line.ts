@@ -37,17 +37,19 @@ export function buildLineMessage(reply: string | FlowReply) {
     type: "flex",
     altText: `${reply.title ?? "採用のご案内"}\n${reply.text}`.slice(0, 1500),
     contents: {
-      type: "bubble", size: "giga",
-      header: { type: "box", layout: "vertical", backgroundColor: "#E8F2F4", paddingAll: "16px", contents: [
-        { type: "text", text: reply.title ?? "採用のご案内", weight: "bold", size: "lg", color: "#102D3F", wrap: true },
+      type: "bubble", size: "mega",
+      header: { type: "box", layout: "vertical", backgroundColor: "#F0F6F3", paddingAll: "12px", contents: [
+        { type: "text", text: reply.title ?? "採用のご案内", weight: "bold", size: "md", color: "#31584C", wrap: true },
       ] },
-      body: { type: "box", layout: "vertical", paddingAll: "16px", contents: [
+      body: { type: "box", layout: "vertical", paddingAll: "12px", contents: [
         { type: "text", text: reply.text.slice(0, 5000), size: "md", color: "#263B47", wrap: true },
       ] },
-      footer: { type: "box", layout: "vertical", spacing: "8px", paddingAll: "16px", contents:
-        reply.choices.slice(0, 13).map((choice, index) => ({
-          type: "button", height: "md", style: index === 0 ? "primary" : "secondary",
-          ...(index === 0 ? { color: "#246A7C" } : {}),
+      footer: { type: "box", layout: "vertical", spacing: "4px", paddingAll: "12px", contents:
+        reply.choices.slice(0, 13).map(choice => ({
+          type: "box", layout: "vertical", height: "44px", justifyContent: "center",
+          paddingStart: "12px", paddingEnd: "12px", cornerRadius: "10px",
+          backgroundColor: "#F0F6F3", borderColor: "#DCE8E1", borderWidth: "1px",
+          contents: [{ type: "text", text: choice.label.slice(0, 40), size: "14px", color: "#31584C", wrap: true }],
           action: choice.uri ? { type: "uri", label: choice.label.slice(0, 40), uri: new URL(choice.uri).href }
             : { type: "message", label: choice.label.slice(0, 40), text: choice.text },
         })),

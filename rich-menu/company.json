@@ -1,10 +1,10 @@
 {
   "size": {
-    "width": 1528,
+    "width": 1529,
     "height": 1029
   },
   "selected": true,
-  "name": "ito-recruiting-company-large-20261008",
+  "name": "ito-recruiting-company-stable-20261008",
   "chatBarText": "採用・会社情報",
   "areas": [
     {
@@ -12,11 +12,11 @@
         "x": 0,
         "y": 0,
         "width": 764,
-        "height": 228
+        "height": 210
       },
       "action": {
         "type": "richmenuswitch",
-        "richMenuAliasId": "ito-recruiting-large-20261008",
+        "richMenuAliasId": "ito-recruiting-stable-20261008",
         "data": "menu=recruiting",
         "label": "お仕事の相談"
       }
@@ -25,12 +25,12 @@
       "bounds": {
         "x": 764,
         "y": 0,
-        "width": 764,
-        "height": 228
+        "width": 765,
+        "height": 210
       },
       "action": {
         "type": "richmenuswitch",
-        "richMenuAliasId": "ito-company-large-20261008",
+        "richMenuAliasId": "ito-company-stable-20261008",
         "data": "menu=company",
         "label": "会社を知る"
       }
@@ -38,9 +38,9 @@
     {
       "bounds": {
         "x": 0,
-        "y": 228,
+        "y": 210,
         "width": 764,
-        "height": 267
+        "height": 280
       },
       "action": {
         "type": "uri",
@@ -50,9 +50,9 @@
     {
       "bounds": {
         "x": 764,
-        "y": 228,
-        "width": 764,
-        "height": 267
+        "y": 210,
+        "width": 765,
+        "height": 280
       },
       "action": {
         "type": "message",
@@ -62,9 +62,9 @@
     {
       "bounds": {
         "x": 0,
-        "y": 495,
+        "y": 490,
         "width": 764,
-        "height": 260
+        "height": 265
       },
       "action": {
         "type": "message",
@@ -74,9 +74,9 @@
     {
       "bounds": {
         "x": 764,
-        "y": 495,
-        "width": 764,
-        "height": 260
+        "y": 490,
+        "width": 765,
+        "height": 265
       },
       "action": {
         "type": "message",
@@ -99,7 +99,7 @@
       "bounds": {
         "x": 764,
         "y": 755,
-        "width": 764,
+        "width": 765,
         "height": 274
       },
       "action": {

@@ -42,19 +42,19 @@ function questions(state: IntakeState): Question[] {
     : a.role === "受付" || a.role === "調理" || a.role === CONSULT ? ["資格なし", "関連資格あり", "取得予定", "その他・相談"]
     : ["資格なし", "初任者研修", "実務者研修", "介護福祉士", "複数資格あり", "その他・相談"];
   const result: Question[] = [
-    { key: "work", text: "どのお仕事に興味がありますか？\n募集状況は採用担当が確認します。", options: [...WORK_ORDER, CONSULT] },
-    { key: "role", text: "希望に近い仕事内容を選んでください。", options: roles },
-    { key: "employment", text: "希望する雇用形態を選んでください。", options: ["正社員を希望", "パートを希望", CONSULT] },
-    { key: "sideJob", text: "副業としての勤務を希望しますか？", options: ["副業ではない", "副業を希望", CONSULT] },
-    { key: "time", text: night ? "希望する時間帯を選んでください。\n配属先・募集状況により調整します。" : "勤務できる曜日の希望を選んでください。\n具体的な時間は担当者と調整します。", options: night ? ["16〜22時", "22〜翌5時", "22〜翌9時", "複数の時間帯が可能", CONSULT] : ["平日中心", "土日も勤務可能", "土日中心", CONSULT] },
-    { key: "frequency", text: "希望する勤務回数を選んでください。", options: ["週4回以上", "週2〜3回", "週1回程度", CONSULT] },
-    { key: "qualification", text: "保有資格に近いものを選んでください。\n複数資格の詳細は担当者が確認します。", options: qualified },
+    { key: "work", text: "まずは、気になるお仕事を選んでみてください。\nまだ迷っていても大丈夫です。", options: [...WORK_ORDER, CONSULT] },
+    { key: "role", text: "どんな仕事内容に興味がありますか？\n近いものを選んでみてください。", options: roles },
+    { key: "employment", text: "どんな働き方が合いそうですか？\nまだ迷っていても大丈夫です。", options: ["正社員を希望", "パートを希望", CONSULT] },
+    { key: "sideJob", text: "今のお仕事と両立したいですか？", options: ["副業ではない", "副業を希望", CONSULT] },
+    { key: "time", text: night ? "夜のお仕事なら、どの時間帯が合いそうですか？\n詳しいシフトは担当者と相談できます。" : "働きやすい曜日を教えてください。\n時間の希望は、あとで担当者と相談できます。", options: night ? ["16〜22時", "22〜翌5時", "22〜翌9時", "複数の時間帯が可能", CONSULT] : ["平日中心", "土日も勤務可能", "土日中心", CONSULT] },
+    { key: "frequency", text: "週にどのくらい働きたいですか？\n今の生活に合う回数を選んでください。", options: ["週4回以上", "週2〜3回", "週1回程度", CONSULT] },
+    { key: "qualification", text: "お持ちの資格を教えてください。\n複数ある方や、これから取得予定の方も選べます。", options: qualified },
   ];
-  if (state.entry === "visit") return [result[0], result[1], { key: "visitTiming", text: "見学の候補として都合のよい時間帯を選んでください。\n担当者が日程・場所を確認します。", options: ["平日の日中", "平日の夕方", "土日を希望", "時間帯は相談したい"] }];
-  if (a.role === "送迎" || a.work === WORK.visit) result.push({ key: "drive", text: "業務での運転について選んでください。", options: ["運転可能", "免許あり・運転は要相談", "運転不可"] });
+  if (state.entry === "visit") return [result[0], result[1], { key: "visitTiming", text: "見学しやすい時間帯はありますか？\n見学の候補として教えてください。日程は担当者と相談しましょう。", options: ["平日の日中", "平日の夕方", "土日を希望", "時間帯は相談したい"] }];
+  if (a.role === "送迎" || a.work === WORK.visit) result.push({ key: "drive", text: "お仕事で車を運転することについて、教えてください。", options: ["運転可能", "免許あり・運転は要相談", "運転不可"] });
   result.push(
-    { key: "start", text: "いつ頃から勤務を希望しますか？", options: ["できるだけ早く", "1か月以内", "2〜3か月後", CONSULT] },
-    { key: "next", text: "次に希望することを選んでください。", options: ["まず見学したい", "応募を進めたい", "担当者に相談したい"] },
+    { key: "start", text: "いつ頃からお仕事を始めたいですか？", options: ["できるだけ早く", "1か月以内", "2〜3か月後", CONSULT] },
+    { key: "next", text: "次はどうしてみたいですか？\nまず見学してから考えることもできます。", options: ["まず見学したい", "応募を進めたい", "担当者に相談したい"] },
   );
   if (state.entry === "working") {
     const order: AnswerKey[] = ["employment", "sideJob", "frequency", "work", "role", "time", "qualification", "drive", "start", "next"];
@@ -73,12 +73,12 @@ function reply(text: string, labels: string[]): FlowReply {
 }
 
 export function promptFor(state: IntakeState): FlowReply {
-  if (state.screen === "consult-topic") return { title: "担当者と相談", ...reply("聞きたいことを選んでください。次に相談内容を自由に入力できます。\n勤務条件、業務の不安、応募前の確認などを相談内容として保存します。", ["仕事内容を相談", "勤務条件を相談", "給与・待遇を相談", "見学・応募を相談", "その他を相談", "採用相談を再開"]) };
-  if (state.screen === "consult-note") return { title: "相談内容を入力", ...reply(`相談項目：${state.answers.consultTopic}\n\n聞きたいことを1通で送ってください。例：「副業で月4回の夜勤を希望しています。募集の有無と休憩時間を確認したいです」\n\n入力内容は担当者の確認用に保存します。自動で回答日時は確約しません。`, ["項目だけで確認を依頼", "担当者に相談", "採用相談を再開"]) };
-  if (state.mode === "human") return reply("担当者への確認待ちとして保存しています。追加のご希望は、このトークに送れます。", ["採用相談を再開", "会社・職場情報"]);
+  if (state.screen === "consult-topic") return { title: "担当者と相談", ...reply("気になること、聞いてみたいことはありますか？\n項目を選んだあと、自由に書いていただけます。", ["仕事内容を相談", "勤務条件を相談", "給与・待遇を相談", "見学・応募を相談", "その他を相談", "採用相談を再開"]) };
+  if (state.screen === "consult-note") return { title: "相談内容を入力", ...reply(`相談項目：${state.answers.consultTopic}\n\n聞いてみたいことを、そのまま送ってください。\n例：「パートで週2日を考えています。勤務時間を相談できますか？」\n\n内容は担当者が確認できるように残します。お返事までお時間をいただく場合があります。`, ["項目だけで確認を依頼", "担当者に相談", "採用相談を再開"]) };
+  if (state.mode === "human") return reply("ご希望は、担当者が確認できるように残しています。\nあとから気になることがあれば、このトークに送ってくださいね。", ["採用相談を再開", "会社・職場情報"]);
   const q = questions(state).find(q => !state.answers[q.key]);
-  if (!q) return { title: state.entry === "visit" ? "見学希望の確認" : state.entry === "apply" ? "応募希望の確認" : "希望内容の確認", ...reply(`ご希望はこちらで合っていますか？\n\n${intakeSummary(state)}\n\n募集枠・条件・見学日時は担当者が確認します。`, ["この内容で確認を依頼", "前の質問に戻る", "会社・職場情報"]) };
-  return { title: state.entry === "visit" ? "見学の希望" : state.entry === "working" ? "働き方の希望" : state.entry === "apply" ? "応募の希望" : "お仕事の希望", ...reply(`${q.text}\n\n${q.options.map((o, i) => `${i + 1}. ${o}`).join("\n")}\n\n大きなボタンまたは番号で回答できます。`, [...q.options, ...(Object.keys(state.answers).length ? ["前の質問に戻る"] : []), "担当者に相談", "会社・職場情報"]) };
+  if (!q) return { title: state.entry === "visit" ? "見学希望の確認" : state.entry === "apply" ? "応募希望の確認" : "希望内容の確認", ...reply(`ここまで教えてくださって、ありがとうございます。\nご希望は、こちらで合っていますか？\n\n${intakeSummary(state)}\n\n募集枠や詳しい条件、見学日時は担当者と相談しましょう。`, ["この内容で確認を依頼", "前の質問に戻る", "会社・職場情報"]) };
+  return { title: state.entry === "visit" ? "見学の希望" : state.entry === "working" ? "働き方の希望" : state.entry === "apply" ? "応募の希望" : "お仕事の希望", ...reply(`${q.text}`, [...q.options, ...(Object.keys(state.answers).length ? ["前の質問に戻る"] : []), "担当者に相談", "会社・職場情報"]) };
 }
 
 function inferWork(message: string): string | undefined {
@@ -142,21 +142,22 @@ export function advanceIntake(previous: IntakeState, raw: string): { state: Inta
   const navigation = ["採用相談を再開", "最初から", "この内容で確認を依頼", "前の質問に戻る"];
   if (state.screen === "consult-note" && !navigation.includes(input)) {
     if (!input) return finish();
-    if (raw.trim().length > 1500) return finish(reply("相談内容は1500文字以内で送ってください。", ["採用相談を再開"]));
+    if (raw.trim().length > 1500) return finish(reply("もう少し短く、1500文字以内で送っていただけますか？", ["採用相談を再開"]));
     if (input !== "項目だけで確認を依頼") state.answers.consultNote = raw.trim();
     state.mode = "human"; delete state.screen;
-    return finish({ title: "相談内容を保存しました", ...reply(`相談内容を担当者の確認待ちとして保存しました。
+    return finish({ title: "相談内容を残しました", ...reply(`教えてくださって、ありがとうございます。
+担当者が確認できるよう、相談内容を残しました。
 
 ${intakeSummary(state)}
 
-追加の内容はこのトークに送れます。回答は担当者による確認が必要です。`, ["担当者に相談", "採用相談を再開", "会社・職場情報"]) }, true);
+あとから付け足したいことがあれば、このトークに送ってくださいね。担当者による確認をお待ちください。`, ["担当者に相談", "採用相談を再開", "会社・職場情報"]) }, true);
   }
   if (state.screen && !navigation.includes(input)) return finish();
   if (input === "最初から") return { state: initialState(), reply: promptFor(initialState()), handoff: false };
   if (input === "この内容で確認を依頼") {
     if (input === "この内容で確認を依頼" && questions(state).some(q => !state.answers[q.key])) return finish();
     state.mode = "human"; delete state.screen;
-    return finish(reply(`担当者への確認待ちとして保存しました。\n${intakeSummary(state)}\n\n追加のご希望はこのトークに送ってください。`, ["採用相談を再開", "会社・職場情報"]), true);
+    return finish(reply(`ありがとうございます。ご希望を担当者が確認できるように残しました。\n${intakeSummary(state)}\n\n追加のご希望も、このトークに送ってくださいね。`, ["採用相談を再開", "会社・職場情報"]), true);
   }
   if (input === "採用相談を再開") { state.mode = "intake"; delete state.screen; return finish(); }
   if (state.mode === "human") return finish();
@@ -175,7 +176,7 @@ ${intakeSummary(state)}
   let selected = q.options.find(o => o.normalize("NFKC") === input);
   if (!selected && /^\d+$/.test(input)) selected = q.options[Number(input) - 1];
   if (!selected && q.key === "work") selected = inferWork(input);
-  if (!selected) return finish({ ...promptFor(state), text: `希望を取り違えないよう、選択肢から選んでください。自由な相談は「担当者に相談」で保存できます。\n\n${promptFor(state).text}` });
+  if (!selected) return finish({ ...promptFor(state), text: `近いものを、下の選択肢から選んでいただけますか？自由にお話ししたいときは「担当者に相談」へどうぞ。\n\n${promptFor(state).text}` });
   if (q.key === "work") chooseWork(selected);
   if (q.key === "role" && state.answers.role !== selected) {
     for (const key of ["time", "qualification", "drive"] as AnswerKey[]) delete state.answers[key];

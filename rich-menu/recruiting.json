@@ -4,7 +4,7 @@
     "height": 1029
   },
   "selected": true,
-  "name": "ito-recruiting-recruiting-large-20261008",
+  "name": "ito-recruiting-recruiting-stable-20261008",
   "chatBarText": "採用・会社情報",
   "areas": [
     {
@@ -16,7 +16,7 @@
       },
       "action": {
         "type": "richmenuswitch",
-        "richMenuAliasId": "ito-recruiting-large-20261008",
+        "richMenuAliasId": "ito-recruiting-stable-20261008",
         "data": "menu=recruiting",
         "label": "お仕事の相談"
       }
@@ -30,7 +30,7 @@
       },
       "action": {
         "type": "richmenuswitch",
-        "richMenuAliasId": "ito-company-large-20261008",
+        "richMenuAliasId": "ito-company-stable-20261008",
         "data": "menu=company",
         "label": "会社を知る"
       }
