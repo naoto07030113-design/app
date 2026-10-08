@@ -10,7 +10,7 @@ function load(file) {
   const code = ts.transpileModule(fs.readFileSync(path.join(__dirname, '../src/lib', file), 'utf8'), {
     compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true },
   }).outputText;
-  vm.runInNewContext(code, { module, exports: module.exports, require: name => name === "./recruiting-content" ? load("recruiting-content.ts") : require(name), Buffer, process });
+  vm.runInNewContext(code, { module, exports: module.exports, require: name => name === "./recruiting-content" ? load("recruiting-content.ts") : require(name), Buffer, process, URL });
   cache[file] = module.exports;
   return module.exports;
 }
