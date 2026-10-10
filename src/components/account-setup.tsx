@@ -14,6 +14,7 @@ export default function AccountSetup({url,anonKey}:{url:string;anonKey:string}) 
   const [error,setError]=useState('');
   useEffect(()=>{
     let active=true;
+    if(new URLSearchParams(window.location.hash.slice(1)).has('error')){setError('このメールのリンクは無効、期限切れ、または使用済みです。設定メールを再送し、最新のメールから開いてください。');return;}
     if(!client){setError('接続設定を確認できません。管理者へお知らせください。');return;}
     void client.auth.getUser().then(({data,error:authError})=>{
       if(!active)return;
@@ -35,10 +36,10 @@ export default function AccountSetup({url,anonKey}:{url:string;anonKey:string}) 
   }
   return <main style={{minHeight:'100dvh',display:'grid',placeItems:'center',padding:24,background:'#e8f5f1'}}><section style={{width:'100%',maxWidth:460,background:'white',padding:28,borderRadius:24,boxShadow:'0 12px 40px #193e351a'}}>
     <p>ITO 採用管理</p><h1>{done?'ログインの準備ができました':'はじめてのログイン設定'}</h1>
-    {done?<><p>次回からメールアドレスと設定したパスワードでログインできます。</p><a href="/" className="primary" style={{display:'inline-flex',minHeight:44,alignItems:'center'}}>採用管理を開く</a></>:<><p>招待されたアカウント：{email||'確認中'}</p><p>パスワードはこの画面でご自身で設定してください。</p><form onSubmit={save}>
+    {done?<><p>次回からメールアドレスと設定したパスワードでログインできます。</p><a href="/" className="primary" style={{display:'inline-flex',minHeight:44,alignItems:'center'}}>採用管理を開く</a></>:<><p>招待されたアカウント：{email||'確認できていません'}</p><p>パスワードはこの画面でご自身で設定してください。</p>{ready&&<form onSubmit={save}>
       <label style={{display:'block',marginBottom:16}}>新しいパスワード<input style={{width:'100%',minHeight:44,marginTop:8}} type="password" autoComplete="new-password" minLength={12} required disabled={!ready||busy} value={password} onChange={e=>setPassword(e.target.value)}/></label>
       <label style={{display:'block',marginBottom:16}}>パスワードをもう一度<input style={{width:'100%',minHeight:44,marginTop:8}} type="password" autoComplete="new-password" minLength={12} required disabled={!ready||busy} value={confirmation} onChange={e=>setConfirmation(e.target.value)}/></label>
       <button className="primary" style={{minHeight:44}} disabled={!ready||busy}>{busy?'設定しています…':'パスワードを設定する'}</button>
-    </form></>}{error&&<p role="alert" style={{color:'#a22525'}}>{error}</p>}
+    </form>}{!ready&&!error&&<p role="status">メールのリンクを確認しています…</p>}</>}{error&&<><p role="alert" style={{color:'#a22525'}}>{error}</p><a className="contact-link" href="/auth/register" style={{display:'inline-flex',minHeight:44,alignItems:'center'}}>設定メールを受け取る</a><p><a href="/">ログイン画面へ戻る</a></p></>}
   </section></main>;
 }
