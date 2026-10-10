@@ -1,7 +1,8 @@
+import {CONTACT_ASK,CONTACT_CHOICES} from "./recruiting-contact";
 import { informationReply, JOBS, WORK_ORDER, type WorkName } from "./recruiting-content";
 export type Department = "welfare" | "therapy" | "unknown";
-type AnswerKey = "work" | "role" | "employment" | "sideJob" | "time" | "frequency" | "qualification" | "drive" | "start" | "next" | "visitTiming" | "consultTopic" | "consultNote";
-export type IntakeState = { version: 1; answers: Partial<Record<AnswerKey, string>>; mode: "intake" | "human"; entry?: "work" | "working" | "visit" | "apply"; screen?: "consult-topic" | "consult-note" };
+type AnswerKey = "work" | "role" | "employment" | "sideJob" | "time" | "frequency" | "qualification" | "drive" | "start" | "next" | "visitTiming" | "consultTopic" | "consultNote" | "contactMethod" | "contactPhone" | "contactEmail" | "contactDeferred";
+export type IntakeState = { version: 1; answers: Partial<Record<AnswerKey, string>>; mode: "intake" | "human"; entry?: "work" | "working" | "visit" | "apply"; contactReturn?: "review" | "intake" | "manual"; screen?: "consult-topic" | "consult-note" | "contact-method" | "contact-detail" };
 export type Choice = { label: string; text: string; uri?: string };
 export type FlowReply = { title?: string; text: string; choices: Choice[] };
 type Question = { key: AnswerKey; text: string; options: string[] };
@@ -14,13 +15,14 @@ export function readState(value: unknown): IntakeState {
   const v = value as Partial<IntakeState>;
   if (v.version !== 1 || !v.answers || typeof v.answers !== "object") return initialState();
   const state = initialState();
-  for (const key of ["work", "role", "employment", "sideJob", "time", "frequency", "qualification", "drive", "start", "next", "visitTiming", "consultTopic", "consultNote"] as AnswerKey[]) {
+  for (const key of ["work", "role", "employment", "sideJob", "time", "frequency", "qualification", "drive", "start", "next", "visitTiming", "consultTopic", "consultNote", "contactMethod", "contactPhone", "contactEmail", "contactDeferred"] as AnswerKey[]) {
     const answer = v.answers[key];
-    if (typeof answer === "string" && answer.length <= (key === "consultNote" ? 1500 : 200)) state.answers[key] = answer;
+    if (typeof answer === "string" && answer.length <= (key === "consultNote" ? 1500 : key === "contactEmail" ? 254 : 200)) state.answers[key] = answer;
   }
   state.mode = v.mode === "human" ? "human" : "intake";
   if (["work", "working", "visit", "apply"].includes(v.entry ?? "")) state.entry = v.entry;
-  if (v.screen === "consult-topic" || v.screen === "consult-note") state.screen = v.screen;
+  if (v.screen === "consult-topic" || v.screen === "consult-note" || v.screen === "contact-method" || v.screen === "contact-detail") state.screen = v.screen;
+  if (["review","intake","manual"].includes(v.contactReturn??"")) state.contactReturn=v.contactReturn;
   return state;
 }
 
@@ -50,7 +52,8 @@ function questions(state: IntakeState): Question[] {
     { key: "frequency", text: "週にどのくらい働きたいですか？\n今の生活に合う回数を選んでください。", options: ["週4回以上", "週2〜3回", "週1回程度", CONSULT] },
     { key: "qualification", text: "お持ちの資格を教えてください。\n複数ある方や、これから取得予定の方も選べます。", options: qualified },
   ];
-  if (state.entry === "visit") return [result[0], result[1], { key: "visitTiming", text: "見学しやすい時間帯はありますか？\n見学の候補として教えてください。日程は担当者と相談しましょう。", options: ["平日の日中", "平日の夕方", "土日を希望", "時間帯は相談したい"] }];
+  const contact:Question={key:"contactMethod",text:CONTACT_ASK,options:CONTACT_CHOICES.map(c=>c.text)};
+  if (state.entry === "visit") return [result[0], result[1], { key: "visitTiming", text: "見学しやすい時間帯はありますか？\n見学の候補として教えてください。日程は担当者と相談しましょう。", options: ["平日の日中", "平日の夕方", "土日を希望", "時間帯は相談したい"] },contact];
   if (a.role === "送迎" || a.work === WORK.visit) result.push({ key: "drive", text: "お仕事で車を運転することについて、教えてください。", options: ["運転可能", "免許あり・運転は要相談", "運転不可"] });
   result.push(
     { key: "start", text: "いつ頃からお仕事を始めたいですか？", options: ["できるだけ早く", "1か月以内", "2〜3か月後", CONSULT] },
@@ -60,11 +63,12 @@ function questions(state: IntakeState): Question[] {
     const order: AnswerKey[] = ["employment", "sideJob", "frequency", "work", "role", "time", "qualification", "drive", "start", "next"];
     result.sort((a, b) => order.indexOf(a.key) - order.indexOf(b.key));
   }
+  result.push(contact);
   return result;
 }
 
 export function intakeSummary(state: IntakeState): string {
-  const names: Record<AnswerKey, string> = { work: "仕事", role: "職種", employment: "雇用形態", sideJob: "副業", time: "勤務条件", frequency: "勤務回数", qualification: "資格", drive: "運転", start: "開始希望", next: "次の希望", visitTiming: "見学の希望時間帯", consultTopic: "相談項目", consultNote: "相談内容" };
+  const names: Record<AnswerKey, string> = { work: "仕事", role: "職種", employment: "雇用形態", sideJob: "副業", time: "勤務条件", frequency: "勤務回数", qualification: "資格", drive: "運転", start: "開始希望", next: "次の希望", visitTiming: "見学の希望時間帯", consultTopic: "相談項目", consultNote: "相談内容", contactMethod:"希望連絡方法",contactPhone:"連絡先電話番号",contactEmail:"連絡先メールアドレス",contactDeferred:"連絡先の確認" };
   return (Object.keys(names) as AnswerKey[]).filter(key => state.answers[key]).map(key => `${names[key]}：${state.answers[key]}`).join("\n");
 }
 
@@ -73,11 +77,14 @@ function reply(text: string, labels: string[]): FlowReply {
 }
 
 export function promptFor(state: IntakeState): FlowReply {
+  if(state.screen==='contact-method')return {title:'ご希望の連絡方法',text:CONTACT_ASK,choices:CONTACT_CHOICES};
+  if(state.screen==='contact-detail')return {title:'連絡先を教えてください',...reply(state.answers.contactMethod==='電話'?'お電話をご希望ですね。連絡先の電話番号を、このトークに送ってください。\n採用のご連絡に使います。今すぐ伝えられない方は「連絡先はあとで伝える」を選べます。':'メールをご希望ですね。連絡先のメールアドレスを、このトークに送ってください。\n採用のご連絡に使います。今すぐ伝えられない方は「連絡先はあとで伝える」を選べます。',['連絡方法を選び直す','連絡先はあとで伝える'])};
   if (state.screen === "consult-topic") return { title: "担当者と相談", ...reply("気になること、聞いてみたいことはありますか？\n項目を選んだあと、自由に書いていただけます。", ["仕事内容を相談", "勤務条件を相談", "給与・待遇を相談", "見学・応募を相談", "その他を相談", "採用相談を再開"]) };
   if (state.screen === "consult-note") return { title: "相談内容を入力", ...reply(`相談項目：${state.answers.consultTopic}\n\n聞いてみたいことを、そのまま送ってください。\n例：「パートで週2日を考えています。勤務時間を相談できますか？」\n\n内容は担当者が確認できるように残します。お返事までお時間をいただく場合があります。`, ["項目だけで確認を依頼", "担当者に相談", "採用相談を再開"]) };
   if (state.mode === "human") return reply("ご希望は、担当者が確認できるように残しています。\nあとから気になることがあれば、このトークに送ってくださいね。", ["採用相談を再開", "会社・職場情報"]);
   const q = questions(state).find(q => !state.answers[q.key]);
   if (!q) return { title: state.entry === "visit" ? "見学希望の確認" : state.entry === "apply" ? "応募希望の確認" : "希望内容の確認", ...reply(`ここまで教えてくださって、ありがとうございます。\nご希望は、こちらで合っていますか？\n\n${intakeSummary(state)}\n\n募集枠や詳しい条件、見学日時は担当者と相談しましょう。`, ["この内容で確認を依頼", "前の質問に戻る", "会社・職場情報"]) };
+  if(q.key==='contactMethod')return {title:'ご希望の連絡方法',text:CONTACT_ASK,choices:[...CONTACT_CHOICES,{label:'前の質問に戻る',text:'前の質問に戻る'}]};
   return { title: state.entry === "visit" ? "見学の希望" : state.entry === "working" ? "働き方の希望" : state.entry === "apply" ? "応募の希望" : "お仕事の希望", ...reply(`${q.text}`, [...q.options, ...(Object.keys(state.answers).length ? ["前の質問に戻る"] : []), "担当者に相談", "会社・職場情報"]) };
 }
 
@@ -89,9 +96,30 @@ function inferWork(message: string): string | undefined {
   return undefined;
 }
 
+export function advanceContact(previous:IntakeState,raw:string){
+ const state=readState(previous),input=raw.normalize('NFKC').trim().replace(/:/g,'：');
+ const finish=()=>{const target=state.contactReturn;delete state.screen;delete state.contactReturn;if(target==='review'||target==='manual'){state.mode='human';return {state,reply:reply('ありがとうございます。ご希望の連絡方法を担当者へ残しました。\n担当者からのご連絡をお待ちください。',['会社・職場情報']),handoff:target==='review'};}return {state,reply:promptFor(state),handoff:false};};
+ if(input==='連絡方法を選び直す'){state.screen='contact-method';return {state,reply:promptFor(state),handoff:false};}
+ if(state.screen==='contact-method'){
+  const method=CONTACT_CHOICES.find(c=>c.text===input)?.text.split('：')[1];
+  if(!method)return {state,reply:promptFor(state),handoff:false};
+  if(state.answers.contactMethod!==method){delete state.answers.contactPhone;delete state.answers.contactEmail;delete state.answers.contactDeferred;}
+  state.answers.contactMethod=method;
+  if(method==='LINE')return finish();
+  state.screen='contact-detail';return {state,reply:promptFor(state),handoff:false};
+ }
+ if(input==='連絡先はあとで伝える'){state.answers.contactDeferred='担当者による連絡先確認が必要';return finish();}
+ if(state.answers.contactMethod==='電話'){
+  const phone=input.replace(/[\s()-]/g,'');if(!/^\+?[0-9]{10,15}$/.test(phone))return {state,reply:{...promptFor(state),text:'電話番号を確認して、もう一度送ってください。\n例：090-1234-5678'},handoff:false};state.answers.contactPhone=phone;
+ }else if(state.answers.contactMethod==='メール'){
+  if(input.length>254||!/^([^\s@]+)@([^\s@.]+\.)+[^\s@.]+$/.test(input))return {state,reply:{...promptFor(state),text:'メールアドレスを確認して、もう一度送ってください。\n例：name@example.com'},handoff:false};state.answers.contactEmail=raw.normalize('NFKC').trim();
+ }else{state.screen='contact-method';return {state,reply:promptFor(state),handoff:false};}
+ delete state.answers.contactDeferred;return finish();
+}
 export function advanceIntake(previous: IntakeState, raw: string): { state: IntakeState; reply: FlowReply; handoff: boolean } {
   const state = readState(previous);
   const input = raw.normalize("NFKC").trim().replace(/:/g, "：");
+  if(state.screen==='contact-method'||state.screen==='contact-detail')return advanceContact(state,raw);
   const finish = (response = promptFor(state), handoff = false) => ({ state, reply: response, handoff });
   const info = informationReply(input);
   if (info) return finish(info);
@@ -144,13 +172,8 @@ export function advanceIntake(previous: IntakeState, raw: string): { state: Inta
     if (!input) return finish();
     if (raw.trim().length > 1500) return finish(reply("もう少し短く、1500文字以内で送っていただけますか？", ["採用相談を再開"]));
     if (input !== "項目だけで確認を依頼") state.answers.consultNote = raw.trim();
-    state.mode = "human"; delete state.screen;
-    return finish({ title: "相談内容を残しました", ...reply(`教えてくださって、ありがとうございます。
-担当者が確認できるよう、相談内容を残しました。
-
-${intakeSummary(state)}
-
-あとから付け足したいことがあれば、このトークに送ってくださいね。担当者による確認をお待ちください。`, ["担当者に相談", "採用相談を再開", "会社・職場情報"]) }, true);
+    state.mode='human';state.contactReturn='review';state.screen='contact-method';
+    return finish(undefined,true);
   }
   if (state.screen && !navigation.includes(input)) return finish();
   if (input === "最初から") return { state: initialState(), reply: promptFor(initialState()), handoff: false };
@@ -168,12 +191,13 @@ ${intakeSummary(state)}
     if (last) {
       const index = qs.indexOf(last);
       for (const q of qs.slice(index)) delete state.answers[q.key];
+      delete state.answers.contactPhone;delete state.answers.contactEmail;delete state.answers.contactDeferred;
     }
     return finish();
   }
   const q = qs.find(q => !state.answers[q.key]);
   if (!q) return finish();
-  let selected = q.options.find(o => o.normalize("NFKC") === input);
+  let selected = q.options.find(o => o.normalize("NFKC").replace(/:/g,"：") === input);
   if (!selected && /^\d+$/.test(input)) selected = q.options[Number(input) - 1];
   if (!selected && q.key === "work") selected = inferWork(input);
   if (!selected) return finish({ ...promptFor(state), text: `近いものを、下の選択肢から選んでいただけますか？自由にお話ししたいときは「担当者に相談」へどうぞ。\n\n${promptFor(state).text}` });
@@ -181,10 +205,11 @@ ${intakeSummary(state)}
   if (q.key === "role" && state.answers.role !== selected) {
     for (const key of ["time", "qualification", "drive"] as AnswerKey[]) delete state.answers[key];
   }
+  if(q.key==='contactMethod'){state.screen='contact-method';state.contactReturn='intake';return advanceContact(state,selected);}
   state.answers[q.key] = selected;
   if (q.key === "work" && selected === CONSULT) {
-    state.mode = "human";
-    return finish(undefined, true);
+    state.mode="human";state.contactReturn="review";state.screen="contact-method";
+    return finish(undefined,true);
   }
   return finish();
 }

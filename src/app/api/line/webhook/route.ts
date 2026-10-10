@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { handleRecruitingMessage } from "@/lib/recruiting";
+import { handleRecruitingMessage, ManualTurnError } from "@/lib/recruiting";
 import { replyLineMessage, verifyLineSignature } from "@/lib/line";
 
 type LineTextEvent = {
@@ -63,7 +63,8 @@ export async function POST(request: NextRequest) {
       });
 
       if (result.reply) await replyLineMessage(event.replyToken, result.reply);
-    } catch {
+    } catch (error) {
+      if(error instanceof ManualTurnError) return NextResponse.json({error:"manual turn unavailable"},{status:503});
       console.error("LINE recruiting webhook processing failed");
       await replyLineMessage(
         event.replyToken,

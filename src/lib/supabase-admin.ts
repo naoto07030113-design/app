@@ -12,3 +12,4 @@ export function getSupabaseAdmin() {
     auth: { persistSession: false, autoRefreshToken: false },
   });
 }
+
